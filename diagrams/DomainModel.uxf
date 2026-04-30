@@ -1,17 +1,150 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>17</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>170</y>
-      <w>220</w>
-      <h>160</h>
+      <x>187</x>
+      <y>306</y>
+      <w>272</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>Customer
 -
+name
+phoneNo
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>544</x>
+      <y>442</y>
+      <w>272</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>SaleOrder
+-
+date
+paymentMethod
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>952</x>
+      <y>442</y>
+      <w>272</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>SaleOrderLine
+-
+quantity
+unitPrice
+product</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1258</x>
+      <y>306</y>
+      <w>272</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Product
+-
+productNumber
+Price
+Category
+expirationDate</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1581</x>
+      <y>306</y>
+      <w>272</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>ProductCategory
+-
+Meat
+Vegetables
+Egg
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1258</x>
+      <y>527</y>
+      <w>272</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Stock
+-
+availableQty</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>544</x>
+      <y>153</y>
+      <w>272</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>ReservedOrder
+-
+date
+expiryDate
+paymentMethod</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>952</x>
+      <y>153</y>
+      <w>272</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>ReservedOrderLine
+-
+quantity
+unitPrice
+product</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>799</x>
+      <y>204</y>
+      <w>187</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+    1    1..*</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>799</x>
+      <y>493</y>
+      <w>187</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+    1    1..*</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
   </element>
 </diagram>
