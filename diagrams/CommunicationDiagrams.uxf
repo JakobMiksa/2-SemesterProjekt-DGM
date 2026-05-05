@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>564</x>
+      <y>248</y>
+      <w>48</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:MainFrame_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>544</x>
+      <y>404</y>
+      <w>88</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:ReservationOrderController_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>584</x>
+      <y>260</y>
+      <w>148</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+1. showAvailableProducts(): List&lt;Product&gt;
+2. addProduct(productNumber, quantity): void
+3. enterReservationInformation(name, phoneNo): void
+4. registerPaymentConfirmation(paymentMethod): void
+5: confirmReservation(): void
+</panel_attributes>
+    <additional_attributes>10.0;360.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>548</x>
+      <y>208</y>
+      <w>80</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Use Case: Reserve Product
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1392</x>
+      <y>260</y>
+      <w>92</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Use Case: Register Physical Sale
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>364</x>
+      <y>492</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:ProductDB_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>504</x>
+      <y>492</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:PriceDB_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>664</x>
+      <y>492</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:StockItemDB_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>784</x>
+      <y>492</y>
+      <w>56</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:CustomerDB_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>880</x>
+      <y>492</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:ReservedOrderDB_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>364</x>
+      <y>604</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:Product_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>504</x>
+      <y>600</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:Price_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>880</x>
+      <y>604</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:ReservedOrder_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>876</x>
+      <y>672</y>
+      <w>64</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:ReservedOrderLine_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>784</x>
+      <y>604</y>
+      <w>56</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:Customer_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>664</x>
+      <y>600</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:StockItem_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>424</x>
+      <y>248</y>
+      <w>148</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>416</y>
+      <w>172</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;30.0;410.0;30.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>504</y>
+      <w>12</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>256</x>
+      <y>368</y>
+      <w>328</w>
+      <h>244</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;590.0;10.0;20.0;800.0;20.0;800.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>388</x>
+      <y>576</y>
+      <w>112</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>1.1.1* [i = 1..n]: p = buildObject(rs): Product
+2.1.1: p = buildObject(rs): Product
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>388</x>
+      <y>408</y>
+      <w>144</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>1.1: products = findAvailableProducts(): List&lt;Product&gt;
+2.1: p = findByProductNumber(productNumber): Product</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>444</x>
+      <y>220</y>
+      <w>124</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>showAvailableProducts()
+addProduct(productNumber, quantity)
+enterReservationInformation(name, phoneNo)
+registerPaymentConfirmation(paymentMethod)
+confirmReservation()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>524</x>
+      <y>416</y>
+      <w>40</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;50.0;80.0;50.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>528</x>
+      <y>476</y>
+      <w>136</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.2: price = findCurrentPrice(productNumber): Price
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>524</x>
+      <y>504</y>
+      <w>12</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>528</x>
+      <y>580</y>
+      <w>136</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.2.1: price = buildObject(rs): Price
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>416</y>
+      <w>108</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>250.0;190.0;250.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>696</x>
+      <y>444</y>
+      <w>160</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>3.1: c = findByPhone(phoneNo): Customer
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>504</y>
+      <w>12</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>688</x>
+      <y>580</y>
+      <w>136</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.3.1: stockItem = buildObject(rs): StockItem
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>608</x>
+      <y>416</y>
+      <w>304</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+5.5: save(ro): void
+</panel_attributes>
+    <additional_attributes>740.0;190.0;740.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>780</x>
+      <y>444</y>
+      <w>160</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>596</x>
+      <y>368</y>
+      <w>384</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>860.0;780.0;940.0;780.0;930.0;20.0;10.0;20.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>820</x>
+      <y>364</y>
+      <w>172</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.5: rol = create(p, quantity, amount): ReservedOrderLine
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>780</x>
+      <y>384</y>
+      <w>160</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>2.4: ro = create(): ReservedOrder
+2.6: addLine(rol): void
+3.2: setCustomer(c): void
+4.1: setPaymentMethod(paymentMethod): void
+5.2: setDate(currentDate): void
+5.3: setExpiryDate(expiryDate): void
+5.4: total = calculateTotal(): BigDecimal
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>416</y>
+      <w>340</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>800.0;490.0;830.0;490.0;830.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>416</y>
+      <w>220</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>530.0;190.0;530.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>596</x>
+      <y>452</y>
+      <w>172</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.3: stockItem = findAvailableStock(productNumber): StockItem
+5.6* [i = 1..n]: decreaseAvailableQty(productNumber, quantity): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>808</x>
+      <y>504</y>
+      <w>12</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>816</x>
+      <y>580</y>
+      <w>92</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>3.1.1: c = buildObject(rs): Customer
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>228</x>
+      <y>604</y>
+      <w>64</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:DBConnection_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>904</x>
+      <y>616</y>
+      <w>12</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>772</x>
+      <y>644</y>
+      <w>136</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>5.4.1* [i = 1..n]: lineTotal = getSubtotal(): BigDecimal
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>368</x>
+      <y>360</y>
+      <w>136</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>5.1: startTransaction(): void
+5.7: commitTransaction(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>356</x>
+      <y>304</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Note:
+bg=yellow
+Diagrammet viser success scenario.
+Hvis gemning eller lageropdatering fejler,
+kaldes rollbackTransaction().
+Order ID laves af databasen med IDENTITY.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1412</x>
+      <y>304</y>
+      <w>48</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:MainFrame_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1392</x>
+      <y>460</y>
+      <w>88</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:SaleOrderController_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1432</x>
+      <y>316</y>
+      <w>148</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+1. showAvailableProducts(): List&lt;Product&gt;
+2. addProduct(productNumber, quantity): void
+3. registerPaymentConfirmation(paymentMethod): void
+4. confirmSale(): void
+</panel_attributes>
+    <additional_attributes>10.0;360.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1212</x>
+      <y>548</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:ProductDB_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1352</x>
+      <y>548</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:PriceDB_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1512</x>
+      <y>548</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:StockItemDB_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1728</x>
+      <y>548</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:SaleOrderDB_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1212</x>
+      <y>660</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:Product_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1352</x>
+      <y>656</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:Price_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1728</x>
+      <y>660</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:SaleOrder_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1724</x>
+      <y>728</y>
+      <w>64</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:SaleOrderLine_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1512</x>
+      <y>656</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:StockItem_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1272</x>
+      <y>304</y>
+      <w>148</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>472</y>
+      <w>172</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;30.0;410.0;30.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>560</y>
+      <w>12</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1104</x>
+      <y>424</y>
+      <w>328</w>
+      <h>244</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;590.0;10.0;20.0;800.0;20.0;800.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1236</x>
+      <y>632</y>
+      <w>112</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>1.1.1* [i = 1..n]: p = buildObject(rs): Product
+2.1.1: p = buildObject(rs): Product
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1236</x>
+      <y>464</y>
+      <w>144</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>1.1: products = findAvailableProducts(): List&lt;Product&gt;
+2.1: p = findByProductNumber(productNumber): Product</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1292</x>
+      <y>284</y>
+      <w>124</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>showAvailableProducts()
+addProduct(productNumber, quantity)
+registerPaymentConfirmation(paymentMethod)
+confirmSale()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1372</x>
+      <y>472</y>
+      <w>40</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;50.0;80.0;50.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1376</x>
+      <y>532</y>
+      <w>136</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.2: price = findCurrentPrice(productNumber): Price
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1372</x>
+      <y>560</y>
+      <w>12</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1376</x>
+      <y>636</y>
+      <w>136</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.2.1: price = buildObject(rs): Price
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1436</x>
+      <y>472</y>
+      <w>108</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>250.0;190.0;250.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1532</x>
+      <y>560</y>
+      <w>12</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1536</x>
+      <y>636</y>
+      <w>136</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.3.1: stockItem = buildObject(rs): StockItem
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1456</x>
+      <y>472</y>
+      <w>304</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+4.4: save(so): void
+</panel_attributes>
+    <additional_attributes>740.0;190.0;740.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1628</x>
+      <y>500</y>
+      <w>160</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1444</x>
+      <y>424</y>
+      <w>384</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>860.0;780.0;940.0;780.0;930.0;20.0;10.0;20.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1668</x>
+      <y>420</y>
+      <w>172</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.5: sol = create(p, quantity, amount): SaleOrderLine
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1668</x>
+      <y>448</y>
+      <w>160</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>2.4: so = create(): SaleOrder
+2.6: addLine(sol): void
+3.1: setPaymentMethod(paymentMethod): void
+4.2: setDate(currentDate): void
+4.3: total = calculateTotal(): BigDecimal
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1460</x>
+      <y>472</y>
+      <w>340</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>800.0;490.0;830.0;490.0;830.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1444</x>
+      <y>508</y>
+      <w>172</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>2.3: stockItem = findAvailableStock(productNumber): StockItem
+4.5* [i = 1..n]: decreaseAvailableQty(productNumber, quantity): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1076</x>
+      <y>660</y>
+      <w>64</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>_:DBConnection_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1752</x>
+      <y>672</y>
+      <w>12</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1620</x>
+      <y>700</y>
+      <w>136</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>4.3.1* [i = 1..n]: lineTotal = getSubtotal(): BigDecimal
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1216</x>
+      <y>416</y>
+      <w>136</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>4.1: startTransaction(): void
+4.6: commitTransaction(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1204</x>
+      <y>360</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Note:
+bg=yellow
+Diagrammet viser success scenario.
+Hvis gemning eller lageropdatering fejler,
+kaldes rollbackTransaction().
+Order ID laves af databasen med IDENTITY.</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
