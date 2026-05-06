@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>5</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>420</x>
-      <y>295</y>
-      <w>60</w>
-      <h>20</h>
+      <x>756</x>
+      <y>90</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:MainFrame_
 </panel_attributes>
@@ -16,10 +16,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>395</x>
-      <y>490</y>
-      <w>110</w>
-      <h>20</h>
+      <x>711</x>
+      <y>441</y>
+      <w>198</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:ReservationOrderController_
 </panel_attributes>
@@ -28,10 +28,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>445</x>
-      <y>310</y>
-      <w>185</w>
-      <h>190</h>
+      <x>801</x>
+      <y>117</y>
+      <w>333</w>
+      <h>342</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 1. showAvailableProducts(): List&lt;Product&gt;
@@ -45,10 +45,10 @@
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>400</x>
-      <y>245</y>
-      <w>100</w>
-      <h>15</h>
+      <x>720</x>
+      <y>0</y>
+      <w>180</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>Use Case: Reserve Product
 bg=yellow
@@ -58,10 +58,10 @@ bg=yellow
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1455</x>
-      <y>310</y>
-      <w>115</w>
-      <h>15</h>
+      <x>2619</x>
+      <y>117</y>
+      <w>207</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>Use Case: Register Physical Sale
 bg=yellow
@@ -71,10 +71,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>170</x>
-      <y>600</y>
-      <w>65</w>
-      <h>20</h>
+      <x>306</x>
+      <y>639</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:ProductDB_
 </panel_attributes>
@@ -83,10 +83,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>345</x>
-      <y>600</y>
-      <w>65</w>
-      <h>20</h>
+      <x>621</x>
+      <y>639</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:PriceDB_
 </panel_attributes>
@@ -95,10 +95,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>545</x>
-      <y>600</y>
-      <w>65</w>
-      <h>20</h>
+      <x>981</x>
+      <y>639</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:StockItemDB_</panel_attributes>
     <additional_attributes/>
@@ -106,10 +106,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>695</x>
-      <y>600</y>
-      <w>70</w>
-      <h>20</h>
+      <x>1251</x>
+      <y>639</y>
+      <w>126</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:CustomerDB_</panel_attributes>
     <additional_attributes/>
@@ -117,10 +117,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>815</x>
-      <y>600</y>
-      <w>65</w>
-      <h>20</h>
+      <x>1467</x>
+      <y>639</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:ReservedOrderDB_</panel_attributes>
     <additional_attributes/>
@@ -128,10 +128,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>170</x>
-      <y>740</y>
-      <w>65</w>
-      <h>20</h>
+      <x>306</x>
+      <y>891</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:Product_</panel_attributes>
     <additional_attributes/>
@@ -139,10 +139,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>345</x>
-      <y>735</y>
-      <w>65</w>
-      <h>20</h>
+      <x>621</x>
+      <y>882</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:Price_</panel_attributes>
     <additional_attributes/>
@@ -150,10 +150,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>815</x>
-      <y>740</y>
-      <w>65</w>
-      <h>20</h>
+      <x>1467</x>
+      <y>891</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:ReservedOrder_</panel_attributes>
     <additional_attributes/>
@@ -161,10 +161,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>810</x>
-      <y>825</y>
-      <w>80</w>
-      <h>20</h>
+      <x>1458</x>
+      <y>1044</y>
+      <w>144</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:ReservedOrderLine_</panel_attributes>
     <additional_attributes/>
@@ -172,10 +172,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>695</x>
-      <y>740</y>
-      <w>70</w>
-      <h>20</h>
+      <x>1251</x>
+      <y>891</y>
+      <w>126</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:Customer_</panel_attributes>
     <additional_attributes/>
@@ -183,10 +183,10 @@ bg=yellow
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>545</x>
-      <y>735</y>
-      <w>65</w>
-      <h>20</h>
+      <x>981</x>
+      <y>882</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:StockItem_</panel_attributes>
     <additional_attributes/>
@@ -194,10 +194,10 @@ bg=yellow
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>295</y>
-      <w>185</w>
-      <h>20</h>
+      <x>441</x>
+      <y>90</y>
+      <w>333</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -206,10 +206,10 @@ bg=yellow
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>195</x>
-      <y>505</y>
-      <w>215</w>
-      <h>105</h>
+      <x>351</x>
+      <y>468</y>
+      <w>387</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;190.0;10.0;30.0;410.0;30.0;410.0;10.0</additional_attributes>
@@ -217,10 +217,10 @@ bg=yellow
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>195</x>
-      <y>615</y>
-      <w>15</w>
-      <h>135</h>
+      <x>351</x>
+      <y>666</y>
+      <w>27</w>
+      <h>243</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -229,10 +229,10 @@ bg=yellow
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>35</x>
-      <y>445</y>
-      <w>410</w>
-      <h>305</h>
+      <x>63</x>
+      <y>360</y>
+      <w>738</w>
+      <h>549</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -241,10 +241,10 @@ bg=yellow
   <element>
     <id>Text</id>
     <coordinates>
-      <x>200</x>
-      <y>705</y>
-      <w>140</w>
-      <h>20</h>
+      <x>360</x>
+      <y>828</y>
+      <w>252</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1.1.1* [i = 1..n]: p = buildObject(rs): Product
 2.1.1: p = buildObject(rs): Product
@@ -254,10 +254,10 @@ bg=yellow
   <element>
     <id>Text</id>
     <coordinates>
-      <x>200</x>
-      <y>495</y>
-      <w>180</w>
-      <h>30</h>
+      <x>360</x>
+      <y>450</y>
+      <w>324</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>1.1: products = findAvailableProducts(): List&lt;Product&gt;
 2.1: p = findByProductNumber(productNumber): Product</panel_attributes>
@@ -266,10 +266,10 @@ bg=yellow
   <element>
     <id>Text</id>
     <coordinates>
-      <x>270</x>
-      <y>260</y>
-      <w>155</w>
-      <h>45</h>
+      <x>486</x>
+      <y>27</y>
+      <w>279</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>showAvailableProducts()
 addProduct(productNumber, quantity)
@@ -282,10 +282,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
-      <y>505</y>
-      <w>50</w>
-      <h>105</h>
+      <x>666</x>
+      <y>468</y>
+      <w>90</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -294,10 +294,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>375</x>
-      <y>580</y>
-      <w>170</w>
-      <h>20</h>
+      <x>675</x>
+      <y>603</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.2: price = findCurrentPrice(productNumber): Price
 </panel_attributes>
@@ -306,10 +306,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
-      <y>615</y>
-      <w>15</w>
-      <h>130</h>
+      <x>666</x>
+      <y>666</y>
+      <w>27</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -318,10 +318,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>375</x>
-      <y>710</y>
-      <w>170</w>
-      <h>20</h>
+      <x>675</x>
+      <y>837</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.2.1: price = buildObject(rs): Price
 </panel_attributes>
@@ -330,10 +330,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>505</y>
-      <w>135</w>
-      <h>105</h>
+      <x>810</x>
+      <y>468</y>
+      <w>243</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -342,10 +342,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>585</x>
-      <y>540</y>
-      <w>200</w>
-      <h>20</h>
+      <x>1053</x>
+      <y>531</y>
+      <w>360</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>3.1: c = findByPhone(phoneNo): Customer
 </panel_attributes>
@@ -354,10 +354,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>615</y>
-      <w>15</w>
-      <h>130</h>
+      <x>1026</x>
+      <y>666</y>
+      <w>27</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -366,10 +366,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>575</x>
-      <y>710</y>
-      <w>170</w>
-      <h>20</h>
+      <x>1035</x>
+      <y>837</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.3.1: stockItem = buildObject(rs): StockItem
 </panel_attributes>
@@ -378,10 +378,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>475</x>
-      <y>505</y>
-      <w>380</w>
-      <h>105</h>
+      <x>855</x>
+      <y>468</y>
+      <w>684</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 5.5: save(ro): void
@@ -391,10 +391,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>690</x>
-      <y>540</y>
-      <w>200</w>
-      <h>20</h>
+      <x>1242</x>
+      <y>531</y>
+      <w>360</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -402,10 +402,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>460</x>
-      <y>445</y>
-      <w>480</w>
-      <h>400</h>
+      <x>828</x>
+      <y>360</y>
+      <w>864</w>
+      <h>720</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -414,22 +414,22 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>740</x>
-      <y>440</y>
-      <w>215</w>
-      <h>20</h>
+      <x>1260</x>
+      <y>351</y>
+      <w>432</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>2.5: rol = create(p, quantity, amount): ReservedOrderLine
+    <panel_attributes>2.5: rol = create(productNumber, quantity, unitPrice): ReservedOrderLine
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>690</x>
-      <y>465</y>
-      <w>200</w>
-      <h>60</h>
+      <x>1242</x>
+      <y>396</y>
+      <w>360</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>2.4: ro = create(): ReservedOrder
 2.6: addLine(rol): void
@@ -444,10 +444,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>505</y>
-      <w>425</w>
-      <h>255</h>
+      <x>864</x>
+      <y>468</y>
+      <w>765</w>
+      <h>459</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -456,10 +456,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>465</x>
-      <y>505</y>
-      <w>275</w>
-      <h>105</h>
+      <x>837</x>
+      <y>468</y>
+      <w>495</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -468,10 +468,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>460</x>
-      <y>550</y>
-      <w>215</w>
-      <h>20</h>
+      <x>828</x>
+      <y>549</y>
+      <w>387</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.3: stockItem = findAvailableStock(productNumber): StockItem
 5.6* [i = 1..n]: decreaseAvailableQty(productNumber, quantity): void
@@ -481,10 +481,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>725</x>
-      <y>615</y>
-      <w>15</w>
-      <h>135</h>
+      <x>1305</x>
+      <y>666</y>
+      <w>27</w>
+      <h>243</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -493,10 +493,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>735</x>
-      <y>710</y>
-      <w>115</w>
-      <h>20</h>
+      <x>1323</x>
+      <y>837</y>
+      <w>207</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>3.1.1: c = buildObject(rs): Customer
 </panel_attributes>
@@ -506,9 +506,9 @@ confirmReservation()
     <id>UMLGeneric</id>
     <coordinates>
       <x>0</x>
-      <y>740</y>
-      <w>80</w>
-      <h>20</h>
+      <y>891</y>
+      <w>144</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:DBConnection_</panel_attributes>
     <additional_attributes/>
@@ -516,10 +516,10 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>845</x>
-      <y>755</y>
-      <w>15</w>
-      <h>80</h>
+      <x>1521</x>
+      <y>918</y>
+      <w>27</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -528,10 +528,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>680</x>
-      <y>790</y>
-      <w>170</w>
-      <h>20</h>
+      <x>1224</x>
+      <y>981</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>5.4.1* [i = 1..n]: lineTotal = getSubtotal(): BigDecimal
 </panel_attributes>
@@ -540,10 +540,10 @@ confirmReservation()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>175</x>
-      <y>435</y>
-      <w>170</w>
-      <h>25</h>
+      <x>315</x>
+      <y>342</y>
+      <w>306</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>5.1: startTransaction(): void
 5.7: commitTransaction(): void
@@ -553,12 +553,13 @@ confirmReservation()
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>160</x>
-      <y>365</y>
-      <w>150</w>
-      <h>45</h>
+      <x>288</x>
+      <y>198</y>
+      <w>270</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Note:
+Ud fra Kapitel 15 i Larman
 bg=yellow
 Diagrammet viser success scenario.
 Hvis gemning eller lageropdatering fejler,
@@ -569,10 +570,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1480</x>
-      <y>365</y>
-      <w>60</w>
-      <h>20</h>
+      <x>2664</x>
+      <y>216</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:MainFrame_
 </panel_attributes>
@@ -581,10 +582,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1455</x>
-      <y>560</y>
-      <w>110</w>
-      <h>20</h>
+      <x>2619</x>
+      <y>567</y>
+      <w>198</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:SaleOrderController_
 </panel_attributes>
@@ -593,10 +594,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1505</x>
-      <y>380</y>
-      <w>185</w>
-      <h>190</h>
+      <x>2709</x>
+      <y>243</y>
+      <w>333</w>
+      <h>342</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 1. showAvailableProducts(): List&lt;Product&gt;
@@ -609,10 +610,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1230</x>
-      <y>670</y>
-      <w>65</w>
-      <h>20</h>
+      <x>2214</x>
+      <y>765</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:ProductDB_
 </panel_attributes>
@@ -621,10 +622,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1405</x>
-      <y>670</y>
-      <w>65</w>
-      <h>20</h>
+      <x>2529</x>
+      <y>765</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:PriceDB_
 </panel_attributes>
@@ -633,10 +634,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1605</x>
-      <y>670</y>
-      <w>65</w>
-      <h>20</h>
+      <x>2889</x>
+      <y>765</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:StockItemDB_</panel_attributes>
     <additional_attributes/>
@@ -644,10 +645,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1875</x>
-      <y>670</y>
-      <w>65</w>
-      <h>20</h>
+      <x>3375</x>
+      <y>765</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:SaleOrderDB_</panel_attributes>
     <additional_attributes/>
@@ -655,10 +656,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1230</x>
-      <y>810</y>
-      <w>65</w>
-      <h>20</h>
+      <x>2214</x>
+      <y>1017</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:Product_</panel_attributes>
     <additional_attributes/>
@@ -666,10 +667,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1405</x>
-      <y>805</y>
-      <w>65</w>
-      <h>20</h>
+      <x>2529</x>
+      <y>1008</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:Price_</panel_attributes>
     <additional_attributes/>
@@ -677,10 +678,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1875</x>
-      <y>810</y>
-      <w>65</w>
-      <h>20</h>
+      <x>3375</x>
+      <y>1017</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:SaleOrder_</panel_attributes>
     <additional_attributes/>
@@ -688,10 +689,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1870</x>
-      <y>895</y>
-      <w>80</w>
-      <h>20</h>
+      <x>3366</x>
+      <y>1170</y>
+      <w>144</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:SaleOrderLine_</panel_attributes>
     <additional_attributes/>
@@ -699,10 +700,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1605</x>
-      <y>805</y>
-      <w>65</w>
-      <h>20</h>
+      <x>2889</x>
+      <y>1008</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:StockItem_</panel_attributes>
     <additional_attributes/>
@@ -710,10 +711,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1305</x>
-      <y>365</y>
-      <w>185</w>
-      <h>20</h>
+      <x>2349</x>
+      <y>216</y>
+      <w>333</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -722,10 +723,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1255</x>
-      <y>575</y>
-      <w>215</w>
-      <h>105</h>
+      <x>2259</x>
+      <y>594</y>
+      <w>387</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;190.0;10.0;30.0;410.0;30.0;410.0;10.0</additional_attributes>
@@ -733,10 +734,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1255</x>
-      <y>685</y>
-      <w>15</w>
-      <h>135</h>
+      <x>2259</x>
+      <y>792</y>
+      <w>27</w>
+      <h>243</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -745,10 +746,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1095</x>
-      <y>515</y>
-      <w>410</w>
-      <h>305</h>
+      <x>1971</x>
+      <y>486</y>
+      <w>738</w>
+      <h>549</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -757,10 +758,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1260</x>
-      <y>775</y>
-      <w>140</w>
-      <h>20</h>
+      <x>2268</x>
+      <y>954</y>
+      <w>252</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>1.1.1* [i = 1..n]: p = buildObject(rs): Product
 2.1.1: p = buildObject(rs): Product
@@ -770,10 +771,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1260</x>
-      <y>565</y>
-      <w>180</w>
-      <h>30</h>
+      <x>2268</x>
+      <y>576</y>
+      <w>324</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>1.1: products = findAvailableProducts(): List&lt;Product&gt;
 2.1: p = findByProductNumber(productNumber): Product</panel_attributes>
@@ -782,10 +783,10 @@ Order ID laves af databasen med IDENTITY.</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1330</x>
-      <y>340</y>
-      <w>155</w>
-      <h>35</h>
+      <x>2394</x>
+      <y>171</y>
+      <w>279</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>showAvailableProducts()
 addProduct(productNumber, quantity)
@@ -797,10 +798,10 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1430</x>
-      <y>575</y>
-      <w>50</w>
-      <h>105</h>
+      <x>2574</x>
+      <y>594</y>
+      <w>90</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -809,10 +810,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1435</x>
-      <y>650</y>
-      <w>170</w>
-      <h>20</h>
+      <x>2583</x>
+      <y>729</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.2: price = findCurrentPrice(productNumber): Price
 </panel_attributes>
@@ -821,10 +822,10 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1430</x>
-      <y>685</y>
-      <w>15</w>
-      <h>130</h>
+      <x>2574</x>
+      <y>792</y>
+      <w>27</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -833,10 +834,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1435</x>
-      <y>780</y>
-      <w>170</w>
-      <h>20</h>
+      <x>2583</x>
+      <y>963</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.2.1: price = buildObject(rs): Price
 </panel_attributes>
@@ -845,10 +846,10 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1510</x>
-      <y>575</y>
-      <w>135</w>
-      <h>105</h>
+      <x>2718</x>
+      <y>594</y>
+      <w>243</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -857,10 +858,10 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1630</x>
-      <y>685</y>
-      <w>15</w>
-      <h>130</h>
+      <x>2934</x>
+      <y>792</y>
+      <w>27</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -869,10 +870,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1635</x>
-      <y>780</y>
-      <w>170</w>
-      <h>20</h>
+      <x>2943</x>
+      <y>963</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.3.1: stockItem = buildObject(rs): StockItem
 </panel_attributes>
@@ -881,10 +882,10 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1535</x>
-      <y>575</y>
-      <w>380</w>
-      <h>105</h>
+      <x>2763</x>
+      <y>594</y>
+      <w>684</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 4.4: save(so): void
@@ -894,10 +895,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1750</x>
-      <y>610</y>
-      <w>200</w>
-      <h>20</h>
+      <x>3150</x>
+      <y>657</y>
+      <w>360</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -905,10 +906,10 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1520</x>
-      <y>515</y>
-      <w>480</w>
-      <h>400</h>
+      <x>2736</x>
+      <y>486</y>
+      <w>864</w>
+      <h>720</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -917,10 +918,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1800</x>
-      <y>510</y>
-      <w>215</w>
-      <h>20</h>
+      <x>3240</x>
+      <y>477</y>
+      <w>387</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.5: sol = create(p, quantity, amount): SaleOrderLine
 </panel_attributes>
@@ -929,10 +930,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1800</x>
-      <y>545</y>
-      <w>200</w>
-      <h>60</h>
+      <x>3240</x>
+      <y>540</y>
+      <w>360</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>2.4: so = create(): SaleOrder
 2.6: addLine(sol): void
@@ -945,10 +946,10 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1540</x>
-      <y>575</y>
-      <w>425</w>
-      <h>255</h>
+      <x>2772</x>
+      <y>594</y>
+      <w>765</w>
+      <h>459</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -957,10 +958,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1520</x>
-      <y>620</y>
-      <w>215</w>
-      <h>20</h>
+      <x>2736</x>
+      <y>675</y>
+      <w>387</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>2.3: stockItem = findAvailableStock(productNumber): StockItem
 4.5* [i = 1..n]: decreaseAvailableQty(productNumber, quantity): void
@@ -970,10 +971,10 @@ confirmSale()
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1060</x>
-      <y>810</y>
-      <w>80</w>
-      <h>20</h>
+      <x>1908</x>
+      <y>1017</y>
+      <w>144</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>_:DBConnection_</panel_attributes>
     <additional_attributes/>
@@ -981,10 +982,10 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1905</x>
-      <y>825</y>
-      <w>15</w>
-      <h>80</h>
+      <x>3429</x>
+      <y>1044</y>
+      <w>27</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 </panel_attributes>
@@ -993,10 +994,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1740</x>
-      <y>860</y>
-      <w>170</w>
-      <h>20</h>
+      <x>3132</x>
+      <y>1107</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>4.3.1* [i = 1..n]: lineTotal = getSubtotal(): BigDecimal
 </panel_attributes>
@@ -1005,10 +1006,10 @@ confirmSale()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1235</x>
-      <y>505</y>
-      <w>170</w>
-      <h>25</h>
+      <x>2223</x>
+      <y>468</y>
+      <w>306</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>4.1: startTransaction(): void
 4.6: commitTransaction(): void
@@ -1018,10 +1019,10 @@ confirmSale()
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1220</x>
-      <y>435</y>
-      <w>150</w>
-      <h>45</h>
+      <x>2196</x>
+      <y>342</y>
+      <w>270</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>Note:
 bg=yellow
