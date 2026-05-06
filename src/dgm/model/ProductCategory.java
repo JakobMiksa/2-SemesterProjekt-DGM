@@ -1,5 +1,8 @@
 package dgm.model;
 
-public class ProductCategory {
-
+public enum ProductCategory {
+	MEAT,
+	VEGETABLES,
+	EGGS,
+	OTHER;
 }
