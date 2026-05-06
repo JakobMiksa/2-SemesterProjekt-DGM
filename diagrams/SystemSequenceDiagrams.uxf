@@ -4,8 +4,8 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>341</x>
-      <y>154</y>
+      <x>352</x>
+      <y>88</y>
       <w>88</w>
       <h>121</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>693</x>
-      <y>231</y>
+      <x>704</x>
+      <y>165</y>
       <w>154</w>
       <h>33</h>
     </coordinates>
@@ -27,8 +27,8 @@ halign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>253</y>
+      <x>385</x>
+      <y>187</y>
       <w>33</w>
       <h>561</h>
     </coordinates>
@@ -38,8 +38,8 @@ halign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>759</x>
-      <y>253</y>
+      <x>770</x>
+      <y>187</y>
       <w>33</w>
       <h>561</h>
     </coordinates>
@@ -49,8 +49,8 @@ halign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>275</y>
+      <x>385</x>
+      <y>209</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -61,8 +61,8 @@ showAvailableProducts()</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>506</x>
-      <y>154</y>
+      <x>517</x>
+      <y>88</y>
       <w>154</w>
       <h>88</h>
     </coordinates>
@@ -72,8 +72,8 @@ showAvailableProducts()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>319</y>
+      <x>385</x>
+      <y>253</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -84,8 +84,8 @@ productList</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>495</y>
+      <x>385</x>
+      <y>429</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -96,20 +96,20 @@ enterReservationInformation(name, phoneNo)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>407</y>
+      <x>385</x>
+      <y>341</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-Product</panel_attributes>
+productAdded</panel_attributes>
     <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>363</y>
+      <x>385</x>
+      <y>297</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -120,8 +120,8 @@ addProduct(productNumber, quantity)</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>319</x>
-      <y>352</y>
+      <x>330</x>
+      <y>286</y>
       <w>506</w>
       <h>99</h>
     </coordinates>
@@ -131,8 +131,8 @@ addProduct(productNumber, quantity)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>561</y>
+      <x>385</x>
+      <y>495</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -143,8 +143,8 @@ registerPaymentConfirmation(paymentMethod)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>616</y>
+      <x>385</x>
+      <y>550</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -155,8 +155,8 @@ paymentConfirmed</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>671</y>
+      <x>385</x>
+      <y>605</y>
       <w>418</w>
       <h>55</h>
     </coordinates>
@@ -168,8 +168,8 @@ confirmReservation()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>374</x>
-      <y>726</y>
+      <x>385</x>
+      <y>660</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -180,8 +180,8 @@ reservationConfirmation</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>957</x>
-      <y>143</y>
+      <x>968</x>
+      <y>77</y>
       <w>88</w>
       <h>121</h>
     </coordinates>
@@ -191,8 +191,8 @@ reservationConfirmation</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1309</x>
-      <y>220</y>
+      <x>1320</x>
+      <y>154</y>
       <w>154</w>
       <h>33</h>
     </coordinates>
@@ -203,8 +203,8 @@ halign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>242</y>
+      <x>1001</x>
+      <y>176</y>
       <w>33</w>
       <h>473</h>
     </coordinates>
@@ -214,8 +214,8 @@ halign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1375</x>
-      <y>242</y>
+      <x>1386</x>
+      <y>176</y>
       <w>33</w>
       <h>473</h>
     </coordinates>
@@ -225,8 +225,8 @@ halign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>264</y>
+      <x>1001</x>
+      <y>198</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -237,8 +237,8 @@ showAvailableProducts()</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1111</x>
-      <y>154</y>
+      <x>1122</x>
+      <y>88</y>
       <w>176</w>
       <h>88</h>
     </coordinates>
@@ -248,8 +248,8 @@ showAvailableProducts()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>308</y>
+      <x>1001</x>
+      <y>242</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -260,20 +260,20 @@ productList</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>396</y>
+      <x>1001</x>
+      <y>330</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-Product</panel_attributes>
+productAdded</panel_attributes>
     <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>352</y>
+      <x>1001</x>
+      <y>286</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -284,8 +284,8 @@ addProduct(productNumber, quantity)</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>935</x>
-      <y>352</y>
+      <x>946</x>
+      <y>286</y>
       <w>506</w>
       <h>99</h>
     </coordinates>
@@ -295,8 +295,8 @@ addProduct(productNumber, quantity)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>462</y>
+      <x>1001</x>
+      <y>396</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -307,8 +307,8 @@ registerPaymentConfirmation(paymentMethod)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>517</y>
+      <x>1001</x>
+      <y>451</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
@@ -319,8 +319,8 @@ paymentConfirmed</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>572</y>
+      <x>1001</x>
+      <y>506</y>
       <w>418</w>
       <h>55</h>
     </coordinates>
@@ -332,25 +332,13 @@ confirmSale()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>990</x>
-      <y>627</y>
+      <x>1001</x>
+      <y>561</y>
       <w>418</w>
       <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 saleConfirmation</panel_attributes>
     <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Text</id>
-    <coordinates>
-      <x>726</x>
-      <y>55</y>
-      <w>154</w>
-      <h>88</h>
-    </coordinates>
-    <panel_attributes>1.1.1*: p = create(): Product
-</panel_attributes>
-    <additional_attributes/>
   </element>
 </diagram>
