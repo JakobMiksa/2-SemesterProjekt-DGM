@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>7</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>637</x>
-      <y>0</y>
-      <w>441</w>
-      <h>168</h>
+      <x>1122</x>
+      <y>198</y>
+      <w>693</w>
+      <h>275</h>
     </coordinates>
     <panel_attributes>MainFrame
 --
 - reservationOrderController: ReservationOrderController
 - saleOrderController: SaleOrderController
 --
++ «create» MainFrame()
 + showAvailableProducts(): List&lt;Product&gt;
 + addProduct(productNumber: int, quantity: int): void
 + enterReservationInformation(name: String, phoneNo: String): void
@@ -29,10 +30,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>217</x>
-      <y>217</y>
-      <w>581</w>
-      <h>231</h>
+      <x>462</x>
+      <y>528</y>
+      <w>913</w>
+      <h>385</h>
     </coordinates>
     <panel_attributes>ReservationOrderController
 --
@@ -43,6 +44,7 @@
 - reservedOrderDAO: ReservedOrderDAO
 - currentOrder: ReservedOrder
 --
++ «create» ReservationOrderController()
 + showAvailableProducts(): List&lt;Product&gt;
 + addProduct(productNumber: int, quantity: int): void
 + enterReservationInformation(name: String, phoneNo: String): void
@@ -60,10 +62,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>931</x>
-      <y>217</y>
-      <w>511</w>
-      <h>196</h>
+      <x>1584</x>
+      <y>550</y>
+      <w>803</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>SaleOrderController
 --
@@ -73,6 +75,7 @@
 - saleOrderDAO: SaleOrderDAO
 - currentOrder: SaleOrder
 --
++ «create» SaleOrderController()
 + showAvailableProducts(): List&lt;Product&gt;
 + addProduct(productNumber: int, quantity: int): void
 + registerPaymentConfirmation(paymentMethod: String): void
@@ -88,17 +91,17 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>56</x>
-      <y>469</y>
-      <w>322</w>
-      <h>210</h>
+      <x>209</x>
+      <y>946</y>
+      <w>506</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>DBConnection
 --
 - connection: Connection
 - instance: DBConnection {static}
 --
-- DBConnection()
+- «create» DBConnection()
 + getInstance(): DBConnection
 + getConnection(): Connection
 + startTransaction(): void
@@ -111,10 +114,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>427</x>
-      <y>476</y>
-      <w>287</w>
-      <h>98</h>
+      <x>792</x>
+      <y>957</y>
+      <w>451</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ProductDAO
@@ -126,10 +129,10 @@ ProductDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>476</y>
-      <w>273</w>
-      <h>77</h>
+      <x>1309</x>
+      <y>957</y>
+      <w>429</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 PriceDAO
@@ -140,10 +143,10 @@ PriceDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1064</x>
-      <y>476</y>
-      <w>329</w>
-      <h>98</h>
+      <x>1793</x>
+      <y>957</y>
+      <w>517</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 StockItemDAO
@@ -155,10 +158,10 @@ StockItemDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1428</x>
-      <y>476</y>
-      <w>231</w>
-      <h>77</h>
+      <x>2365</x>
+      <y>957</y>
+      <w>363</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 CustomerDAO
@@ -169,10 +172,10 @@ CustomerDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>427</x>
-      <y>777</y>
-      <w>287</w>
-      <h>70</h>
+      <x>792</x>
+      <y>1430</y>
+      <w>451</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ReservedOrderDAO
@@ -183,10 +186,10 @@ ReservedOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>756</y>
-      <w>266</w>
-      <h>70</h>
+      <x>1309</x>
+      <y>1397</y>
+      <w>418</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 SaleOrderDAO
@@ -197,16 +200,16 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>427</x>
-      <y>616</y>
-      <w>287</w>
-      <h>140</h>
+      <x>792</x>
+      <y>1177</y>
+      <w>451</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>ProductDB
 --
 - connection: DBConnection
 --
-+ ProductDB()
++ «create» ProductDB()
 + findAvailableProducts(): List&lt;Product&gt;
 + findByProductNumber(productNumber: int): Product
 - buildObject(rs: ResultSet): Product
@@ -217,16 +220,16 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>602</y>
-      <w>273</w>
-      <h>126</h>
+      <x>1309</x>
+      <y>1155</y>
+      <w>429</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>PriceDB
 --
 - connection: DBConnection
 --
-+ PriceDB()
++ «create» PriceDB()
 + findCurrentPrice(productNumber: int): Price
 - buildObject(rs: ResultSet): Price
 + getConnection(): DBConnection
@@ -236,16 +239,16 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1064</x>
-      <y>714</y>
-      <w>329</w>
-      <h>140</h>
+      <x>1793</x>
+      <y>1331</y>
+      <w>517</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>StockItemDB
 --
 - connection: DBConnection
 --
-+ StockItemDB()
++ «create» StockItemDB()
 + findAvailableStock(productNumber: int): StockItem
 + decreaseAvailableQty(productNumber: int, quantity: int): void
 - buildObject(rs: ResultSet): StockItem
@@ -256,16 +259,16 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1428</x>
-      <y>714</y>
-      <w>231</w>
-      <h>126</h>
+      <x>2365</x>
+      <y>1331</y>
+      <w>363</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>CustomerDB
 --
 - connection: DBConnection
 --
-+ CustomerDB()
++ «create» CustomerDB()
 + findByPhone(phoneNo: String): Customer
 - buildObject(rs: ResultSet): Customer
 + getConnection(): DBConnection
@@ -275,16 +278,16 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>427</x>
-      <y>875</y>
-      <w>287</w>
-      <h>98</h>
+      <x>792</x>
+      <y>1584</y>
+      <w>451</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>ReservedOrderDB
 --
 - connection: DBConnection
 --
-+ ReservedOrderDB()
++ «create» ReservedOrderDB()
 + save(order: ReservedOrder): void
 + getConnection(): DBConnection
 + setConnection(connection: DBConnection): void</panel_attributes>
@@ -293,16 +296,16 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>875</y>
-      <w>266</w>
-      <h>98</h>
+      <x>1309</x>
+      <y>1584</y>
+      <w>418</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>SaleOrderDB
 --
 - connection: DBConnection
 --
-+ SaleOrderDB()
++ «create» SaleOrderDB()
 + save(order: SaleOrder): void
 + getConnection(): DBConnection
 + setConnection(connection: DBConnection): void</panel_attributes>
@@ -311,17 +314,17 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>56</x>
-      <y>1001</y>
-      <w>252</w>
-      <h>140</h>
+      <x>11</x>
+      <y>1782</y>
+      <w>396</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>Customer
 --
 - phoneNo: String
 - name: String
 --
-+ Customer(name: String, phoneNo: String)
++ «create» Customer(name: String, phoneNo: String)
 + getPhoneNo(): String
 + setPhoneNo(phoneNo: String): void
 + getName(): String
@@ -331,19 +334,22 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>1001</y>
-      <w>273</w>
-      <h>154</h>
+      <x>528</x>
+      <y>1782</y>
+      <w>572</w>
+      <h>242</h>
     </coordinates>
     <panel_attributes>Product
 --
 - productNumber: int
+- name: String
 - category: ProductCategory
 --
-+ Product(productNumber: int, category: ProductCategory)
++ «create» Product(productNumber: int, name: String, category: ProductCategory)
 + getProductNumber(): int
 + setProductNumber(productNumber: int): void
++ getName(): String
++ setName(name: String): void
 + getCategory(): ProductCategory
 + setCategory(category: ProductCategory): void</panel_attributes>
     <additional_attributes/>
@@ -351,10 +357,10 @@ SaleOrderDAO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>658</x>
-      <y>994</y>
-      <w>196</w>
-      <h>112</h>
+      <x>1155</x>
+      <y>1771</y>
+      <w>308</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enumeration&gt;&gt;
 ProductCategory
@@ -368,10 +374,10 @@ OTHER</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>889</x>
-      <y>1001</y>
-      <w>329</w>
-      <h>175</h>
+      <x>1518</x>
+      <y>1782</y>
+      <w>572</w>
+      <h>275</h>
     </coordinates>
     <panel_attributes>Price
 --
@@ -379,7 +385,7 @@ OTHER</panel_attributes>
 - validFrom: LocalDate
 - validTo: LocalDate
 --
-+ Price(amount: BigDecimal, validFrom: LocalDate, validTo: LocalDate)
++ «create» Price(amount: BigDecimal, validFrom: LocalDate, validTo: LocalDate)
 + getAmount(): BigDecimal
 + setAmount(amount: BigDecimal): void
 + getValidFrom(): LocalDate
@@ -391,10 +397,10 @@ OTHER</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1246</x>
-      <y>1001</y>
-      <w>280</w>
-      <h>238</h>
+      <x>2178</x>
+      <y>1782</y>
+      <w>726</w>
+      <h>374</h>
     </coordinates>
     <panel_attributes>StockItem
 --
@@ -403,6 +409,7 @@ OTHER</panel_attributes>
 - product: Product
 - location: Location
 --
++ «create» StockItem(product: Product, location: Location, availableQty: int, expirationDate: LocalDate)
 + decreaseAvailableQty(quantity: int): void
 + getAvailableQty(): int
 + setAvailableQty(availableQty: int): void
@@ -417,16 +424,16 @@ OTHER</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1596</x>
-      <y>1001</y>
-      <w>140</w>
-      <h>105</h>
+      <x>2992</x>
+      <y>1782</y>
+      <w>253</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>Location
 --
 - name: String
 --
-+ Location(name: String)
++ «create» Location(name: String)
 + getName(): String
 + setName(name: String): void</panel_attributes>
     <additional_attributes/>
@@ -434,10 +441,10 @@ OTHER</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>105</x>
-      <y>1204</y>
-      <w>441</w>
-      <h>350</h>
+      <x>286</x>
+      <y>2101</y>
+      <w>693</w>
+      <h>550</h>
     </coordinates>
     <panel_attributes>ReservedOrder
 --
@@ -448,7 +455,7 @@ OTHER</panel_attributes>
 - customer: Customer
 - orderLines: List&lt;ReservedOrderLine&gt;
 --
-+ ReservedOrder()
++ «create» ReservedOrder()
 + addLine(line: ReservedOrderLine): void
 + setCustomer(customer: Customer): void
 + setPaymentMethod(paymentMethod: String): void
@@ -468,10 +475,10 @@ OTHER</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>623</x>
-      <y>1225</y>
-      <w>350</w>
-      <h>210</h>
+      <x>1100</x>
+      <y>2134</y>
+      <w>616</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>ReservedOrderLine
 --
@@ -479,7 +486,7 @@ OTHER</panel_attributes>
 - unitPrice: BigDecimal
 - product: Product
 --
-+ ReservedOrderLine(product: Product, quantity: int, unitPrice: BigDecimal)
++ «create» ReservedOrderLine(product: Product, quantity: int, unitPrice: BigDecimal)
 + getSubtotal(): BigDecimal
 + getQuantity(): int
 + setQuantity(quantity: int): void
@@ -492,10 +499,10 @@ OTHER</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>105</x>
-      <y>1610</y>
-      <w>406</w>
-      <h>308</h>
+      <x>286</x>
+      <y>2739</y>
+      <w>638</w>
+      <h>484</h>
     </coordinates>
     <panel_attributes>SaleOrder
 --
@@ -504,7 +511,7 @@ OTHER</panel_attributes>
 - total: BigDecimal
 - orderLines: List&lt;SaleOrderLine&gt;
 --
-+ SaleOrder()
++ «create» SaleOrder()
 + addLine(line: SaleOrderLine): void
 + setPaymentMethod(paymentMethod: String): void
 + setDate(date: LocalDate): void
@@ -520,10 +527,10 @@ OTHER</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>623</x>
-      <y>1624</y>
-      <w>329</w>
-      <h>210</h>
+      <x>1100</x>
+      <y>2761</y>
+      <w>561</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>SaleOrderLine
 --
@@ -531,7 +538,7 @@ OTHER</panel_attributes>
 - unitPrice: BigDecimal
 - product: Product
 --
-+ SaleOrderLine(product: Product, quantity: int, unitPrice: BigDecimal)
++ «create» SaleOrderLine(product: Product, quantity: int, unitPrice: BigDecimal)
 + getSubtotal(): BigDecimal
 + getQuantity(): int
 + setQuantity(quantity: int): void
@@ -544,21 +551,21 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>161</y>
-      <w>21</w>
-      <h>70</h>
+      <x>1265</x>
+      <y>462</y>
+      <w>33</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;75.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;55.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1071</x>
-      <y>98</y>
-      <w>133</w>
-      <h>133</h>
+      <x>1804</x>
+      <y>363</y>
+      <w>209</w>
+      <h>209</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;170.0;10.0;170.0;165.0</additional_attributes>
@@ -566,10 +573,10 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>539</x>
-      <y>1330</y>
-      <w>98</w>
-      <h>28</h>
+      <x>968</x>
+      <y>2299</y>
+      <w>154</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 1     1..*</panel_attributes>
@@ -578,10 +585,10 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>539</x>
-      <y>1519</y>
-      <w>266</w>
-      <h>119</h>
+      <x>968</x>
+      <y>2596</y>
+      <w>418</w>
+      <h>187</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 1     1..*</panel_attributes>
@@ -590,10 +597,10 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>1148</y>
-      <w>147</w>
-      <h>91</h>
+      <x>979</x>
+      <y>2013</y>
+      <w>231</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=-
 1                 *                                                          </panel_attributes>
@@ -602,10 +609,10 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>616</x>
-      <y>1022</y>
-      <w>511</w>
-      <h>700</h>
+      <x>1089</x>
+      <y>1793</y>
+      <w>803</w>
+      <h>1122</h>
     </coordinates>
     <panel_attributes>lt=-
 
@@ -652,15 +659,15 @@ OTHER</panel_attributes>
 
 
 </panel_attributes>
-    <additional_attributes>10.0;180.0;160.0;180.0;160.0;250.0;690.0;250.0;700.0;980.0;480.0;980.0</additional_attributes>
+    <additional_attributes>10.0;200.0;160.0;200.0;160.0;270.0;690.0;270.0;700.0;1000.0;520.0;1000.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>259</x>
-      <y>1134</y>
-      <w>28</w>
-      <h>84</h>
+      <x>330</x>
+      <y>1991</y>
+      <w>44</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=-
 1
@@ -673,10 +680,10 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>616</x>
-      <y>1036</y>
-      <w>56</w>
-      <h>28</h>
+      <x>1089</x>
+      <y>1837</y>
+      <w>88</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=-
 *      1</panel_attributes>
@@ -685,10 +692,10 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>616</x>
-      <y>1120</y>
-      <w>287</w>
-      <h>28</h>
+      <x>1089</x>
+      <y>1969</y>
+      <w>451</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=-
 1                                     *</panel_attributes>
@@ -697,34 +704,34 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1519</x>
-      <y>1036</y>
-      <w>91</w>
-      <h>28</h>
+      <x>2893</x>
+      <y>1837</y>
+      <w>121</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=-
 *      1</panel_attributes>
-    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>518</x>
-      <y>973</y>
-      <w>875</w>
-      <h>42</h>
+      <x>935</x>
+      <y>1738</y>
+      <w>1628</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=-
 1        *</panel_attributes>
-    <additional_attributes>1230.0;40.0;1230.0;20.0;10.0;20.0;10.0;40.0</additional_attributes>
+    <additional_attributes>1460.0;40.0;1460.0;20.0;10.0;20.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
-      <y>546</y>
-      <w>21</w>
-      <h>70</h>
+      <x>1529</x>
+      <y>1067</y>
+      <w>33</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -732,21 +739,21 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1225</x>
-      <y>567</y>
-      <w>21</w>
-      <h>161</h>
+      <x>2046</x>
+      <y>1067</y>
+      <w>33</w>
+      <h>286</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>567</x>
-      <y>567</y>
-      <w>21</w>
-      <h>63</h>
+      <x>1012</x>
+      <y>1100</y>
+      <w>33</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -754,10 +761,10 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>840</y>
-      <w>21</w>
-      <h>49</h>
+      <x>1001</x>
+      <y>1529</y>
+      <w>33</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -765,10 +772,10 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
-      <y>819</y>
-      <w>21</w>
-      <h>70</h>
+      <x>1507</x>
+      <y>1496</y>
+      <w>33</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -776,12 +783,25 @@ OTHER</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1533</x>
-      <y>546</y>
-      <w>21</w>
-      <h>182</h>
+      <x>2530</x>
+      <y>1067</y>
+      <w>33</w>
+      <h>286</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1331</x>
+      <y>0</y>
+      <w>253</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Design Class Diagram
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
