@@ -2,4 +2,5 @@ bin/
 *.class
 .metadata/
 Thumbs.db
+docs/PROJECT_DESIGN.md
 
