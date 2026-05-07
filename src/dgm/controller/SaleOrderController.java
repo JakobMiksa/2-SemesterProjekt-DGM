@@ -1,5 +1,6 @@
 package dgm.controller;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -26,6 +27,14 @@ public class SaleOrderController {
     }
 
     public void addProduct(int productNumber, int quantity) {
+        if (productNumber <= 0) {
+            throw new IllegalArgumentException("Product number must be greater than zero.");
+        }
+
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Quantity must be greater than zero.");
+        }
+
         Product product = productDAO.findByProductNumber(productNumber);
         Price price = priceDAO.findCurrentPrice(productNumber);
         StockItem stockItem = stockItemDAO.findAvailableStock(productNumber);
@@ -34,7 +43,21 @@ public class SaleOrderController {
             throw new IllegalArgumentException("Product not found.");
         }
 
-        if (stockItem.getAvailableQty() < quantity) {
+        if (price.getAmount() == null || price.getAmount().compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("Product price is invalid.");
+        }
+
+        int requestedQuantity = quantity;
+
+        if (currentOrder != null) {
+            for (SaleOrderLine orderLine : currentOrder.getOrderLines()) {
+                if (orderLine.getProduct().getProductNumber() == productNumber) {
+                    requestedQuantity += orderLine.getQuantity();
+                }
+            }
+        }
+
+        if (stockItem.getAvailableQty() < requestedQuantity) {
             throw new IllegalArgumentException("Not enough in stock.");
         }
 
@@ -51,12 +74,24 @@ public class SaleOrderController {
             throw new IllegalStateException("No active order exists.");
         }
 
+        if (paymentMethod == null || paymentMethod.trim().isEmpty()) {
+            throw new IllegalArgumentException("Payment method is required.");
+        }
+
         currentOrder.setPaymentMethod(paymentMethod);
     }
 
     public void confirmSale() {
         if (currentOrder == null) {
             throw new IllegalStateException("No active order exists.");
+        }
+
+        if (currentOrder.getOrderLines().isEmpty()) {
+            throw new IllegalStateException("Order has no order lines.");
+        }
+
+        if (currentOrder.getPaymentMethod() == null || currentOrder.getPaymentMethod().trim().isEmpty()) {
+            throw new IllegalStateException("Payment has not been confirmed.");
         }
 
         DBConnection connection = DBConnection.getInstance();

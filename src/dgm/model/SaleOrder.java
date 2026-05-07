@@ -6,33 +6,34 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class SaleOrder {
+
 	private LocalDate date;
 	private String paymentMethod;
 	private BigDecimal total;
 	private List<SaleOrderLine> orderLines;
-	
+
 	public SaleOrder() {
-		this.date = LocalDate.now();
-		this.paymentMethod = null;
-		this.total = BigDecimal.ZERO;
-	    this.orderLines = new ArrayList<>();
-		}
+		date = LocalDate.now();
+		paymentMethod = null;
+		total = BigDecimal.ZERO;
+		orderLines = new ArrayList<>();
+	}
 
 	public void addLine(SaleOrderLine line) {
-	    this.orderLines.add(line);
-	}		
-	
+		orderLines.add(line);
+	}
+
 	public BigDecimal calculateTotal() {
-        BigDecimal calculatedTotal = BigDecimal.ZERO;
+		BigDecimal calculatedTotal = BigDecimal.ZERO;
 
-        for (SaleOrderLine line : orderLines) {
-            calculatedTotal = calculatedTotal.add(line.getSubtotal());
-        }
+		for (SaleOrderLine line : orderLines) {
+			calculatedTotal = calculatedTotal.add(line.getSubtotal());
+		}
 
-        total = calculatedTotal;
-        return total;
-    }
-	
+		total = calculatedTotal;
+		return total;
+	}
+
 	public LocalDate getDate() {
 		return date;
 	}
@@ -64,8 +65,4 @@ public class SaleOrder {
 	public void setOrderLines(List<SaleOrderLine> orderLines) {
 		this.orderLines = orderLines;
 	}
-	
-	
 }
-	
-

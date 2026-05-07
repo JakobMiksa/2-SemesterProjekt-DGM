@@ -3,10 +3,11 @@ package dgm.model;
 import java.math.BigDecimal;
 
 public class ReservedOrderLine {
+
 	private int quantity;
 	private BigDecimal unitPrice;
 	private Product product;
-	
+
 	public ReservedOrderLine(Product product, int quantity, BigDecimal unitPrice) {
 		this.product = product;
 		this.quantity = quantity;
@@ -14,8 +15,7 @@ public class ReservedOrderLine {
 	}
 
 	public BigDecimal getSubtotal() {
-		BigDecimal res = unitPrice.multiply(BigDecimal.valueOf(quantity));
-		return res;
+		return unitPrice.multiply(BigDecimal.valueOf(quantity));
 	}
 
 	public int getQuantity() {

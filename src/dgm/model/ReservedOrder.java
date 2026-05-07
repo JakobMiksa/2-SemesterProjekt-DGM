@@ -6,36 +6,37 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class ReservedOrder {
+
 	private LocalDate date;
 	private LocalDate expiryDate;
 	private String paymentMethod;
 	private BigDecimal total;
 	private Customer customer;
-	private List<ReservedOrderLine> orderLines; 
-	
-	public ReservedOrder() {
-		this.date = LocalDate.now();
-		this.expiryDate = LocalDate.now().plusDays(3);
-		this.paymentMethod = null;
-		this.total = BigDecimal.ZERO;
-		this.customer = null;
-		this.orderLines = new ArrayList<>();
-	}
-	
-	public void addLine(ReservedOrderLine line) {
-	    this.orderLines.add(line);
-	}
-	
-	public BigDecimal calculateTotal() {
-        BigDecimal calculatedTotal = BigDecimal.ZERO;
+	private List<ReservedOrderLine> orderLines;
 
-        for (ReservedOrderLine line : orderLines) {
-            calculatedTotal = calculatedTotal.add(line.getSubtotal());
-    }
-        
-        total = calculatedTotal;
-        return total;
-    }
+	public ReservedOrder() {
+		date = LocalDate.now();
+		expiryDate = LocalDate.now().plusDays(3);
+		paymentMethod = null;
+		total = BigDecimal.ZERO;
+		customer = null;
+		orderLines = new ArrayList<>();
+	}
+
+	public void addLine(ReservedOrderLine line) {
+		orderLines.add(line);
+	}
+
+	public BigDecimal calculateTotal() {
+		BigDecimal calculatedTotal = BigDecimal.ZERO;
+
+		for (ReservedOrderLine line : orderLines) {
+			calculatedTotal = calculatedTotal.add(line.getSubtotal());
+		}
+
+		total = calculatedTotal;
+		return total;
+	}
 
 	public LocalDate getDate() {
 		return date;
@@ -84,5 +85,4 @@ public class ReservedOrder {
 	public void setOrderLines(List<ReservedOrderLine> orderLines) {
 		this.orderLines = orderLines;
 	}
-	
 }

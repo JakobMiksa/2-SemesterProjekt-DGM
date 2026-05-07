@@ -1,5 +1,6 @@
 package dgm.controller;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -28,6 +29,14 @@ public class ReservationOrderController {
     }
 
     public void addProduct(int productNumber, int quantity) {
+        if (productNumber <= 0) {
+            throw new IllegalArgumentException("Product number must be greater than zero.");
+        }
+
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Quantity must be greater than zero.");
+        }
+
         Product product = productDAO.findByProductNumber(productNumber);
         Price price = priceDAO.findCurrentPrice(productNumber);
         StockItem stockItem = stockItemDAO.findAvailableStock(productNumber);
@@ -36,7 +45,21 @@ public class ReservationOrderController {
             throw new IllegalArgumentException("Product not found.");
         }
 
-        if (stockItem.getAvailableQty() < quantity) {
+        if (price.getAmount() == null || price.getAmount().compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("Product price is invalid.");
+        }
+
+        int requestedQuantity = quantity;
+
+        if (currentOrder != null) {
+            for (ReservedOrderLine orderLine : currentOrder.getOrderLines()) {
+                if (orderLine.getProduct().getProductNumber() == productNumber) {
+                    requestedQuantity += orderLine.getQuantity();
+                }
+            }
+        }
+
+        if (stockItem.getAvailableQty() < requestedQuantity) {
             throw new IllegalArgumentException("There is not enough in stock.");
         }
 
@@ -53,7 +76,15 @@ public class ReservationOrderController {
             throw new IllegalStateException("No active reservation exists.");
         }
 
-        Customer customer = customerDAO.findByPhone(phoneNo);
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name is required.");
+        }
+
+        if (phoneNo == null || phoneNo.trim().isEmpty()) {
+            throw new IllegalArgumentException("Phone number is required.");
+        }
+
+        Customer customer = customerDAO.findByPhone(phoneNo.trim());
 
         if (customer == null) {
             throw new IllegalArgumentException("Could not find phone in the system.");
@@ -67,12 +98,28 @@ public class ReservationOrderController {
             throw new IllegalStateException("There is no active reservation.");
         }
 
+        if (paymentMethod == null || paymentMethod.trim().isEmpty()) {
+            throw new IllegalArgumentException("Payment method is required.");
+        }
+
         currentOrder.setPaymentMethod(paymentMethod);
     }
 
     public void confirmReservation() {
         if (currentOrder == null) {
             throw new IllegalStateException("Active reservation does not exist.");
+        }
+
+        if (currentOrder.getOrderLines().isEmpty()) {
+            throw new IllegalStateException("Reservation has no order lines.");
+        }
+
+        if (currentOrder.getCustomer() == null) {
+            throw new IllegalStateException("Reservation is missing customer.");
+        }
+
+        if (currentOrder.getPaymentMethod() == null || currentOrder.getPaymentMethod().trim().isEmpty()) {
+            throw new IllegalStateException("Payment has not been confirmed.");
         }
 
         DBConnection connection = DBConnection.getInstance();
