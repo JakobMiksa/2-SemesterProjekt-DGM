@@ -52,28 +52,4 @@ public class StockItem {
 	public void setExpirationDate(LocalDate expirationDate) {
 		this.expirationDate = expirationDate;
 	}
-
-    public int getAvailableQty() {
-    	return availableQty;
-    }
-    
-    public LocalDate getExpirationDate() {
-    	return expirationDate;
-    }  
-    
-    public void setProduct(Product product) {
-    	this.product = product;
-    }
-    
-    public void setLocation(Location location) {
-    	this.location = location;
-    }  
-    
-    public void setAvailableQty(int availableQty) {
-    	this.availableQty = availableQty;
-    }
-    
-    public void setExpirationDate(LocalDate expirationDate) {
-    	this.expirationDate = expirationDate;
-    }
 }
