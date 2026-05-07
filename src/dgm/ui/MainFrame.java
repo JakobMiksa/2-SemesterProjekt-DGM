@@ -9,14 +9,13 @@ import javax.swing.JTabbedPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import dgm.controller.AppController;
 import dgm.ui.panel.FeaturePanel;
 
 public class MainFrame extends JFrame {
 
     private static final long serialVersionUID = 1L;
 
-    public MainFrame(AppController controller) {
+    public MainFrame() {
         setTitle("Den Glade Bondemand");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(960, 640);
@@ -31,19 +30,18 @@ public class MainFrame extends JFrame {
         JTabbedPane tabs = new JTabbedPane();
         tabs.addTab("Lager", new FeaturePanel(
                 "Lagerstyring",
-                "Her kan I senere vise lagerstatus, antal varer og søgning."));
+                "Her kan I senere vise lagerstatus, antal varer og soegning."));
         tabs.addTab("Salg", new FeaturePanel(
                 "Salgsregistrering",
                 "Her kan I senere registrere salg og opdatere lageret automatisk."));
         tabs.addTab("Reservationer", new FeaturePanel(
                 "Reservationer",
-                "Her kan I senere håndtere reservationer og betaling på forhånd."));
+                "Her kan I senere haandtere reservationer og betaling paa forhaand."));
 
-        JLabel footer = new JLabel(controller.getSystemStatus());
+        JLabel footer = new JLabel("Systemstatus: Swing-skeleton klar.");
 
         add(header, BorderLayout.NORTH);
         add(tabs, BorderLayout.CENTER);
         add(footer, BorderLayout.SOUTH);
     }
 }
-

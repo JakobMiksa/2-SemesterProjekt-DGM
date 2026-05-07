@@ -2,7 +2,6 @@ package dgm.app;
 
 import javax.swing.SwingUtilities;
 
-import dgm.controller.AppController;
 import dgm.ui.MainFrame;
 
 public final class App {
@@ -14,8 +13,7 @@ public final class App {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                AppController controller = new AppController();
-                MainFrame frame = new MainFrame(controller);
+                MainFrame frame = new MainFrame();
                 frame.setVisible(true);
             }
         });
