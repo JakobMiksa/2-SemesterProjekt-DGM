@@ -2,23 +2,23 @@ package dgm.database;
 
 import java.sql.ResultSet;
 
-import dgm.model.Customer;
+import dgm.model.Price;
 
-public class CustomerDB {
+public class PriceDB {
 
     private DBConnection connection;
 
-    public CustomerDB() {
+    public PriceDB() {
         this.connection = DBConnection.getInstance();
     }
 
-    public Customer findByPhone(String phoneNo) {
-        // TODO: Put SQL ind senere
+    public Price findCurrentPrice(int productNumber) {
+        // TODO: Tilføj SQL senere
         return null;
     }
 
-    private Customer buildObject(ResultSet rs) {
-        // TODO: Byg kunde ud fra Resultat sæt senere
+    private Price buildObject(ResultSet rs) {
+        // TODO: Byg Price-objekt fra ResultSet senere
         return null;
     }
 

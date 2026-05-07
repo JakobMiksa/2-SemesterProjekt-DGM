@@ -1,28 +1,31 @@
 package dgm.database;
 
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
-import dgm.model.StockItem;
+import dgm.model.Product;
 
-public class StockItemDB {
+public class ProductDB {
 
     private DBConnection connection;
 
-    public StockItemDB() {
+    public ProductDB() {
         this.connection = DBConnection.getInstance();
     }
 
-    public StockItem findAvailableStock(int productNumber) {
+    public List<Product> findAvailableProducts() {
+        // TODO: Tilføj SQL senere
+        return new ArrayList<>();
+    }
+
+    public Product findByProductNumber(int productNumber) {
         // TODO: Tilføj SQL senere
         return null;
     }
 
-    public void decreaseAvailableQty(int productNumber, int quantity) {
-        // TODO: Tilføj SQL senere
-    }
-
-    private StockItem buildObject(ResultSet rs) {
-        // TODO: Byg StockItem ud fra resultat sæt senere
+    private Product buildObject(ResultSet rs) {
+        // TODO: Byg Product-objekt fra ResultSet senere
         return null;
     }
 

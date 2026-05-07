@@ -9,6 +9,7 @@ public class StockItem {
 	private int availableQty;
 	private LocalDate expirationDate;
 
+<<<<<<< Updated upstream
 	public StockItem(Product product, Location location, int availableQty, LocalDate expirationDate) {
 		this.product = product;
 		this.location = location;
@@ -51,4 +52,29 @@ public class StockItem {
 	public void setExpirationDate(LocalDate expirationDate) {
 		this.expirationDate = expirationDate;
 	}
+=======
+    public int getAvailableQty() {
+    	return availableQty;
+    }
+    
+    public LocalDate getExpirationDate() {
+    	return expirationDate;
+    }  
+    
+    public void setProduct(Product product) {
+    	this.product = product;
+    }
+    
+    public void setLocation(Location location) {
+    	this.location = location;
+    }  
+    
+    public void setAvailableQty(int availableQty) {
+    	this.availableQty = availableQty;
+    }
+    
+    public void setExpirationDate(LocalDate expirationDate) {
+    	this.expirationDate = expirationDate;
+    }
+>>>>>>> Stashed changes
 }
