@@ -42,7 +42,7 @@ bg=yellow
     <panel_attributes>Customer
 --
 PK phoneNo: VARCHAR(20)
-name: VARCHAR(100)
+name: NVARCHAR(100)
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -57,7 +57,7 @@ name: VARCHAR(100)
     <panel_attributes>ProductCategory
 --
 PK categoryName: VARCHAR(50)
-name: VARCHAR(100)
+name: NVARCHAR(100)
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -73,7 +73,7 @@ name: VARCHAR(100)
 --
 PK productNumber: INT
 FK categoryName: VARCHAR(50)
-name: VARCHAR(100)
+name: NVARCHAR(100)
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -88,7 +88,7 @@ name: VARCHAR(100)
     <panel_attributes>Location
 --
 PK locationId: INT IDENTITY
-name: VARCHAR(100)
+name: NVARCHAR(100)
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -106,7 +106,7 @@ PK reservedOrderId: INT IDENTITY
 FK customerPhoneNo: VARCHAR(20)
 date: DATE
 expiryDate: DATE
-paymentMethod: VARCHAR(50)
+paymentMethod: NVARCHAR(50)
 total: DECIMAL(10,2)
 </panel_attributes>
     <additional_attributes/>
@@ -177,7 +177,7 @@ expirationDate: DATE
 --
 PK saleOrderId: INT IDENTITY
 date: DATE
-paymentMethod: VARCHAR(50)
+paymentMethod: NVARCHAR(50)
 total: DECIMAL(10,2)
 </panel_attributes>
     <additional_attributes/>

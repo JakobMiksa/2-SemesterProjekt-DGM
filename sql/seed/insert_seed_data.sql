@@ -5,43 +5,43 @@ BEGIN TRY
 
     IF NOT EXISTS (SELECT 1 FROM dbo.ProductCategory WHERE categoryName = 'MEAT')
         INSERT INTO dbo.ProductCategory (categoryName, name)
-        VALUES ('MEAT', 'Kød');
+        VALUES ('MEAT', N'Kød');
 
     IF NOT EXISTS (SELECT 1 FROM dbo.ProductCategory WHERE categoryName = 'VEGETABLES')
         INSERT INTO dbo.ProductCategory (categoryName, name)
-        VALUES ('VEGETABLES', 'Grøntsager');
+        VALUES ('VEGETABLES', N'Grøntsager');
 
     IF NOT EXISTS (SELECT 1 FROM dbo.ProductCategory WHERE categoryName = 'EGGS')
         INSERT INTO dbo.ProductCategory (categoryName, name)
-        VALUES ('EGGS', 'Æg');
+        VALUES ('EGGS', N'Æg');
 
     IF NOT EXISTS (SELECT 1 FROM dbo.ProductCategory WHERE categoryName = 'OTHER')
         INSERT INTO dbo.ProductCategory (categoryName, name)
-        VALUES ('OTHER', 'Andet');
+        VALUES ('OTHER', N'Andet');
 
     IF NOT EXISTS (SELECT 1 FROM dbo.Product WHERE productNumber = 1001)
         INSERT INTO dbo.Product (productNumber, categoryName, name)
-        VALUES (1001, 'EGGS', 'Æg 10 stk');
+        VALUES (1001, 'EGGS', N'Æg 10 stk');
 
     IF NOT EXISTS (SELECT 1 FROM dbo.Product WHERE productNumber = 2001)
         INSERT INTO dbo.Product (productNumber, categoryName, name)
-        VALUES (2001, 'MEAT', 'Oksekød 1 kg');
+        VALUES (2001, 'MEAT', N'Oksekød 1 kg');
 
     IF NOT EXISTS (SELECT 1 FROM dbo.Product WHERE productNumber = 3001)
         INSERT INTO dbo.Product (productNumber, categoryName, name)
-        VALUES (3001, 'VEGETABLES', 'Gulerødder 0.5 kg');
+        VALUES (3001, 'VEGETABLES', N'Gulerødder 0.5 kg');
 
-    IF NOT EXISTS (SELECT 1 FROM dbo.Location WHERE name = 'Den Glade Bondemand')
+    IF NOT EXISTS (SELECT 1 FROM dbo.Location WHERE name = N'Den Glade Bondemand')
         INSERT INTO dbo.Location (name)
-        VALUES ('Den Glade Bondemand');
+        VALUES (N'Den Glade Bondemand');
 
-    IF NOT EXISTS (SELECT 1 FROM dbo.Location WHERE name = 'Vejbod')
+    IF NOT EXISTS (SELECT 1 FROM dbo.Location WHERE name = N'Vejbod')
         INSERT INTO dbo.Location (name)
-        VALUES ('Vejbod');
+        VALUES (N'Vejbod');
 
-    IF NOT EXISTS (SELECT 1 FROM dbo.Location WHERE name = 'Fryser 1')
+    IF NOT EXISTS (SELECT 1 FROM dbo.Location WHERE name = N'Fryser 1')
         INSERT INTO dbo.Location (name)
-        VALUES ('Fryser 1');
+        VALUES (N'Fryser 1');
 
     IF NOT EXISTS (SELECT 1 FROM dbo.Customer WHERE phoneNo = '11111111')
         INSERT INTO dbo.Customer (phoneNo, name)
@@ -89,19 +89,19 @@ BEGIN TRY
     DECLARE @denGladeBondemandId INT = (
         SELECT locationId
         FROM dbo.Location
-        WHERE name = 'Den Glade Bondemand'
+        WHERE name = N'Den Glade Bondemand'
     );
 
     DECLARE @vejbodId INT = (
         SELECT locationId
         FROM dbo.Location
-        WHERE name = 'Vejbod'
+        WHERE name = N'Vejbod'
     );
 
     DECLARE @fryserId INT = (
         SELECT locationId
         FROM dbo.Location
-        WHERE name = 'Fryser 1'
+        WHERE name = N'Fryser 1'
     );
 
     IF NOT EXISTS (

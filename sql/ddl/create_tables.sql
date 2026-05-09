@@ -35,14 +35,14 @@ BEGIN TRY
 
     CREATE TABLE dbo.Customer (
         phoneNo VARCHAR(20) NOT NULL,
-        name VARCHAR(100) NOT NULL,
+        name NVARCHAR(100) NOT NULL,
 
         CONSTRAINT PK_Customer PRIMARY KEY (phoneNo)
     );
 
     CREATE TABLE dbo.ProductCategory (
         categoryName VARCHAR(50) NOT NULL,
-        name VARCHAR(100) NOT NULL,
+        name NVARCHAR(100) NOT NULL,
 
         CONSTRAINT PK_ProductCategory PRIMARY KEY (categoryName)
     );
@@ -50,7 +50,7 @@ BEGIN TRY
     CREATE TABLE dbo.Product (
         productNumber INT NOT NULL,
         categoryName VARCHAR(50) NOT NULL,
-        name VARCHAR(100) NOT NULL,
+        name NVARCHAR(100) NOT NULL,
 
         CONSTRAINT PK_Product PRIMARY KEY (productNumber),
         CONSTRAINT FK_Product_ProductCategory
@@ -60,7 +60,7 @@ BEGIN TRY
 
     CREATE TABLE dbo.Location (
         locationId INT IDENTITY(1,1) NOT NULL,
-        name VARCHAR(100) NOT NULL,
+        name NVARCHAR(100) NOT NULL,
 
         CONSTRAINT PK_Location PRIMARY KEY (locationId),
         CONSTRAINT UQ_Location_Name UNIQUE (name)
@@ -106,7 +106,7 @@ BEGIN TRY
         customerPhoneNo VARCHAR(20) NOT NULL,
         [date] DATE NOT NULL,
         expiryDate DATE NOT NULL,
-        paymentMethod VARCHAR(50) NOT NULL,
+        paymentMethod NVARCHAR(50) NOT NULL,
         total DECIMAL(10,2) NOT NULL,
 
         CONSTRAINT PK_ReservedOrder PRIMARY KEY (reservedOrderId),
@@ -142,7 +142,7 @@ BEGIN TRY
     CREATE TABLE dbo.SaleOrder (
         saleOrderId INT IDENTITY(1,1) NOT NULL,
         [date] DATE NOT NULL,
-        paymentMethod VARCHAR(50) NOT NULL,
+        paymentMethod NVARCHAR(50) NOT NULL,
         total DECIMAL(10,2) NOT NULL,
 
         CONSTRAINT PK_SaleOrder PRIMARY KEY (saleOrderId),

@@ -7,6 +7,10 @@ public class DataAccessException extends Exception {
         super(message);
     }
 
+    public DataAccessException(Exception e, String explanation) {
+        super(explanation, e);
+    }
+
     public DataAccessException(String message, Throwable cause) {
         super(message, cause);
     }
