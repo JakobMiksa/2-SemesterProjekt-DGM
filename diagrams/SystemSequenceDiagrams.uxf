@@ -174,7 +174,7 @@ confirmReservation()
       <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-reservationConfirmation</panel_attributes>
+reservationReceipt</panel_attributes>
     <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
   </element>
   <element>
@@ -338,7 +338,7 @@ confirmSale()
       <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-saleConfirmation</panel_attributes>
+saleReceipt</panel_attributes>
     <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
   </element>
 </diagram>
