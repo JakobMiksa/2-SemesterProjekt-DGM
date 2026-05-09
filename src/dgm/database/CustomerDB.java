@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import dgm.model.Customer;
 
-public class CustomerDB {
+public class CustomerDB implements CustomerDAO {
 
     private static String FIND_BY_PHONE_QUERY = "select phoneNo, name from Customer where phoneNo = ?";
 
@@ -23,6 +23,7 @@ public class CustomerDB {
         }
     }
 
+    @Override
     public Customer findByPhone(String phoneNo) throws DataAccessException {
         try {
             findByPhonePS.setString(1, phoneNo);

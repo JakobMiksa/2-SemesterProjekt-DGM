@@ -3,6 +3,41 @@ SET XACT_ABORT ON;
 BEGIN TRY
     BEGIN TRANSACTION;
 
+    DECLARE @sql NVARCHAR(MAX) = N'';
+
+    SELECT @sql = @sql + N'ALTER TABLE '
+        + QUOTENAME(OBJECT_SCHEMA_NAME(parent_object_id)) + N'.'
+        + QUOTENAME(OBJECT_NAME(parent_object_id))
+        + N' DROP CONSTRAINT ' + QUOTENAME(name) + N';'
+    FROM sys.foreign_keys
+    WHERE parent_object_id IN (
+            OBJECT_ID(N'dbo.Customer'),
+            OBJECT_ID(N'dbo.ProductCategory'),
+            OBJECT_ID(N'dbo.Product'),
+            OBJECT_ID(N'dbo.Location'),
+            OBJECT_ID(N'dbo.Price'),
+            OBJECT_ID(N'dbo.StockItem'),
+            OBJECT_ID(N'dbo.ReservedOrder'),
+            OBJECT_ID(N'dbo.ReservedOrderLine'),
+            OBJECT_ID(N'dbo.SaleOrder'),
+            OBJECT_ID(N'dbo.SaleOrderLine')
+        )
+        OR referenced_object_id IN (
+            OBJECT_ID(N'dbo.Customer'),
+            OBJECT_ID(N'dbo.ProductCategory'),
+            OBJECT_ID(N'dbo.Product'),
+            OBJECT_ID(N'dbo.Location'),
+            OBJECT_ID(N'dbo.Price'),
+            OBJECT_ID(N'dbo.StockItem'),
+            OBJECT_ID(N'dbo.ReservedOrder'),
+            OBJECT_ID(N'dbo.ReservedOrderLine'),
+            OBJECT_ID(N'dbo.SaleOrder'),
+            OBJECT_ID(N'dbo.SaleOrderLine')
+        );
+
+    IF LEN(@sql) > 0
+        EXEC sp_executesql @sql;
+
     IF OBJECT_ID('dbo.SaleOrderLine', 'U') IS NOT NULL
         DROP TABLE dbo.SaleOrderLine;
 

@@ -8,7 +8,7 @@ import java.sql.Statement;
 import dgm.model.SaleOrder;
 import dgm.model.SaleOrderLine;
 
-public class SaleOrderDB {
+public class SaleOrderDB implements SaleOrderDAO {
 
     private static String INSERT_SALE_ORDER_QUERY =
             "insert into SaleOrder ([date], paymentMethod, total) values (?, ?, ?)";
@@ -32,6 +32,7 @@ public class SaleOrderDB {
         }
     }
 
+    @Override
     public void save(SaleOrder order) throws DataAccessException {
         validateOrder(order);
 

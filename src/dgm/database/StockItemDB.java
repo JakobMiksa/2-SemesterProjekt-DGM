@@ -3,13 +3,15 @@ package dgm.database;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import dgm.model.Location;
 import dgm.model.Product;
 import dgm.model.ProductCategory;
 import dgm.model.StockItem;
 
-public class StockItemDB {
+public class StockItemDB implements StockItemDAO {
 
     private static String FIND_AVAILABLE_STOCK_QUERY =
             "select top 1 si.stockItemId, si.availableQty, si.expirationDate, " +
@@ -19,6 +21,14 @@ public class StockItemDB {
             "join Location l on l.locationId = si.locationId " +
             "where si.productNumber = ? and si.availableQty > 0 " +
             "order by si.expirationDate, si.stockItemId";
+    private static String FIND_ALL_AVAILABLE_STOCK_QUERY =
+            "select si.stockItemId, si.availableQty, si.expirationDate, " +
+            "p.productNumber, p.name as productName, p.categoryName, l.name as locationName " +
+            "from StockItem si " +
+            "join Product p on p.productNumber = si.productNumber " +
+            "join Location l on l.locationId = si.locationId " +
+            "where si.availableQty > 0 " +
+            "order by p.productNumber, si.expirationDate, si.stockItemId";
     private static String DECREASE_AVAILABLE_QTY_QUERY =
             "with SelectedStock as (" +
             "select top 1 stockItemId from StockItem " +
@@ -29,6 +39,7 @@ public class StockItemDB {
 
     private DBConnection connection;
     private PreparedStatement findAvailableStockPS;
+    private PreparedStatement findAllAvailableStockPS;
     private PreparedStatement decreaseAvailableQtyPS;
 
     public StockItemDB() throws DataAccessException {
@@ -36,12 +47,14 @@ public class StockItemDB {
 
         try {
             findAvailableStockPS = connection.getConnection().prepareStatement(FIND_AVAILABLE_STOCK_QUERY);
+            findAllAvailableStockPS = connection.getConnection().prepareStatement(FIND_ALL_AVAILABLE_STOCK_QUERY);
             decreaseAvailableQtyPS = connection.getConnection().prepareStatement(DECREASE_AVAILABLE_QTY_QUERY);
         } catch (SQLException e) {
             throw new DataAccessException(e, "Could not prepare statements for StockItemDB");
         }
     }
 
+    @Override
     public StockItem findAvailableStock(int productNumber) throws DataAccessException {
         try {
             findAvailableStockPS.setInt(1, productNumber);
@@ -58,6 +71,22 @@ public class StockItemDB {
         }
     }
 
+    @Override
+    public List<StockItem> findAllAvailableStock() throws DataAccessException {
+        try (ResultSet rs = findAllAvailableStockPS.executeQuery()) {
+            List<StockItem> stockItems = new ArrayList<>();
+
+            while (rs.next()) {
+                stockItems.add(buildObject(rs));
+            }
+
+            return stockItems;
+        } catch (SQLException e) {
+            throw new DataAccessException(e, "Could not find all available stock");
+        }
+    }
+
+    @Override
     public void decreaseAvailableQty(int productNumber, int quantity) throws DataAccessException {
         try {
             decreaseAvailableQtyPS.setInt(1, productNumber);

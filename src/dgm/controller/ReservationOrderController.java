@@ -16,7 +16,7 @@ public class ReservationOrderController {
     private ReservedOrderDAO reservedOrderDAO;
     private ReservedOrder currentOrder;
 
-    public ReservationOrderController() {
+    public ReservationOrderController() throws DataAccessException {
         this.productDAO = new ProductDB();
         this.priceDAO = new PriceDB();
         this.stockItemDAO = new StockItemDB();
@@ -24,11 +24,11 @@ public class ReservationOrderController {
         this.reservedOrderDAO = new ReservedOrderDB();
     }
 
-    public List<Product> showAvailableProducts() {
-        return productDAO.findAvailableProducts();
+    public List<StockItem> showAvailableProducts() throws DataAccessException {
+        return stockItemDAO.findAllAvailableStock();
     }
 
-    public void addProduct(int productNumber, int quantity) {
+    public void addProduct(int productNumber, int quantity) throws DataAccessException {
         if (productNumber <= 0) {
             throw new IllegalArgumentException("Product number must be greater than zero.");
         }
@@ -71,7 +71,7 @@ public class ReservationOrderController {
         currentOrder.addLine(orderLine);
     }
 
-    public void enterReservationInformation(String name, String phoneNo) {
+    public void enterReservationInformation(String name, String phoneNo) throws DataAccessException {
         if (currentOrder == null) {
             throw new IllegalStateException("No active reservation exists.");
         }
@@ -105,7 +105,7 @@ public class ReservationOrderController {
         currentOrder.setPaymentMethod(paymentMethod);
     }
 
-    public void confirmReservation() {
+    public void confirmReservation() throws DataAccessException {
         if (currentOrder == null) {
             throw new IllegalStateException("Active reservation does not exist.");
         }
@@ -141,6 +141,9 @@ public class ReservationOrderController {
             connection.commitTransaction();
 
             currentOrder = null;
+        } catch (DataAccessException e) {
+            connection.rollbackTransaction();
+            throw e;
         } catch (RuntimeException e) {
             connection.rollbackTransaction();
             throw e;

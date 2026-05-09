@@ -15,18 +15,18 @@ public class SaleOrderController {
     private SaleOrderDAO saleOrderDAO;
     private SaleOrder currentOrder;
 
-    public SaleOrderController() {
+    public SaleOrderController() throws DataAccessException {
         this.productDAO = new ProductDB();
         this.priceDAO = new PriceDB();
         this.stockItemDAO = new StockItemDB();
         this.saleOrderDAO = new SaleOrderDB();
     }
 
-    public List<Product> showAvailableProducts() {
-        return productDAO.findAvailableProducts();
+    public List<StockItem> showAvailableProducts() throws DataAccessException {
+        return stockItemDAO.findAllAvailableStock();
     }
 
-    public void addProduct(int productNumber, int quantity) {
+    public void addProduct(int productNumber, int quantity) throws DataAccessException {
         if (productNumber <= 0) {
             throw new IllegalArgumentException("Product number must be greater than zero.");
         }
@@ -81,7 +81,7 @@ public class SaleOrderController {
         currentOrder.setPaymentMethod(paymentMethod);
     }
 
-    public void confirmSale() {
+    public void confirmSale() throws DataAccessException {
         if (currentOrder == null) {
             throw new IllegalStateException("No active order exists.");
         }
@@ -112,6 +112,9 @@ public class SaleOrderController {
             connection.commitTransaction();
 
             currentOrder = null;
+        } catch (DataAccessException e) {
+            connection.rollbackTransaction();
+            throw e;
         } catch (RuntimeException e) {
             connection.rollbackTransaction();
             throw e;

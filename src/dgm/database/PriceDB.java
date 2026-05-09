@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 import dgm.model.Price;
 
-public class PriceDB {
+public class PriceDB implements PriceDAO {
 
     private static String FIND_CURRENT_PRICE_QUERY =
             "select top 1 priceId, productNumber, amount, validFrom, validTo " +
@@ -30,6 +30,7 @@ public class PriceDB {
         }
     }
 
+    @Override
     public Price findCurrentPrice(int productNumber) throws DataAccessException {
         try {
             findCurrentPricePS.setInt(1, productNumber);

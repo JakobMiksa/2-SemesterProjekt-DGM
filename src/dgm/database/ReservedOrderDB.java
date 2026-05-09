@@ -8,7 +8,7 @@ import java.sql.Statement;
 import dgm.model.ReservedOrder;
 import dgm.model.ReservedOrderLine;
 
-public class ReservedOrderDB {
+public class ReservedOrderDB implements ReservedOrderDAO {
 
     private static String INSERT_RESERVED_ORDER_QUERY =
             "insert into ReservedOrder (customerPhoneNo, [date], expiryDate, paymentMethod, total) " +
@@ -33,6 +33,7 @@ public class ReservedOrderDB {
         }
     }
 
+    @Override
     public void save(ReservedOrder order) throws DataAccessException {
         validateOrder(order);
 
