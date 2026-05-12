@@ -124,15 +124,21 @@ BEGIN TRY
         INSERT INTO dbo.StockItem (productNumber, locationId, availableQty, expirationDate)
         VALUES (2001, @fryserId, 12, '2026-12-31');
 
+    UPDATE dbo.StockItem
+    SET locationId = @vejbodId
+    WHERE productNumber = 3001
+      AND locationId = @denGladeBondemandId
+      AND expirationDate = '2026-05-20';
+
     IF NOT EXISTS (
         SELECT 1
         FROM dbo.StockItem
         WHERE productNumber = 3001
-          AND locationId = @denGladeBondemandId
+          AND locationId = @vejbodId
           AND expirationDate = '2026-05-20'
     )
         INSERT INTO dbo.StockItem (productNumber, locationId, availableQty, expirationDate)
-        VALUES (3001, @denGladeBondemandId, 20, '2026-05-20');
+        VALUES (3001, @vejbodId, 20, '2026-05-20');
 
     COMMIT TRANSACTION;
 END TRY

@@ -124,4 +124,8 @@ public class SaleOrderController {
     public SaleOrder getCurrentOrder() {
         return currentOrder;
     }
+
+    public void clearCurrentOrder() {
+        currentOrder = null;
+    }
 }

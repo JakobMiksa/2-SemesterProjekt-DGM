@@ -90,6 +90,10 @@ public class ReservationOrderController {
             throw new IllegalArgumentException("Could not find phone in the system.");
         }
 
+        if (!customer.getName().equalsIgnoreCase(name.trim())) {
+            throw new IllegalArgumentException("Name and phone number do not match.");
+        }
+
         currentOrder.setCustomer(customer);
     }
 
@@ -152,5 +156,9 @@ public class ReservationOrderController {
 
     public ReservedOrder getCurrentOrder() {
         return currentOrder;
+    }
+
+    public void clearCurrentOrder() {
+        currentOrder = null;
     }
 }

@@ -46,6 +46,8 @@ public class MainFrame extends JFrame {
     private JTabbedPane tabbedPane;
     private JTextField reservationNameField;
     private JTextField reservationPhoneField;
+    private JLabel reservationTotalLabel;
+    private JLabel saleTotalLabel;
 
     private DefaultTableModel reservationProductModel;
     private DefaultTableModel reservationCartModel;
@@ -121,8 +123,8 @@ public class MainFrame extends JFrame {
             showStatus("Kundeoplysninger kunne ikke hentes.");
             showError("Kundeoplysninger kunne ikke hentes.");
         } catch (RuntimeException e) {
-            showStatus("Telefonnummeret findes ikke i kundetabellen.");
-            showError("Telefonnummeret findes ikke i kundetabellen.");
+            showStatus("Kundeoplysningerne matcher ikke.");
+            showError("Kundeoplysningerne matcher ikke en kunde i systemet.");
         }
     }
 
@@ -223,11 +225,14 @@ public class MainFrame extends JFrame {
 
         JButton confirmButton = new JButton("Bekræft reservation");
         confirmButton.addActionListener(e -> confirmReservationFromForm());
+        JButton clearButton = new JButton("Ryd kurv");
+        clearButton.addActionListener(e -> clearReservationCart());
+        reservationTotalLabel = new JLabel(formatTotal(BigDecimal.ZERO));
 
         JPanel orderPanel = new JPanel(new BorderLayout(0, 8));
         orderPanel.add(infoPanel, BorderLayout.NORTH);
         orderPanel.add(new JScrollPane(cartTable), BorderLayout.CENTER);
-        orderPanel.add(confirmButton, BorderLayout.SOUTH);
+        orderPanel.add(createOrderBottomPanel(reservationTotalLabel, clearButton, confirmButton), BorderLayout.SOUTH);
 
         contentPanel.add(productPanel);
         contentPanel.add(orderPanel);
@@ -261,11 +266,14 @@ public class MainFrame extends JFrame {
 
         JButton confirmButton = new JButton("Registrer salg");
         confirmButton.addActionListener(e -> confirmSaleFromForm());
+        JButton clearButton = new JButton("Ryd kurv");
+        clearButton.addActionListener(e -> clearSaleCart());
+        saleTotalLabel = new JLabel(formatTotal(BigDecimal.ZERO));
 
         JPanel orderPanel = new JPanel(new BorderLayout(0, 8));
         orderPanel.add(paymentPanel, BorderLayout.NORTH);
         orderPanel.add(new JScrollPane(cartTable), BorderLayout.CENTER);
-        orderPanel.add(confirmButton, BorderLayout.SOUTH);
+        orderPanel.add(createOrderBottomPanel(saleTotalLabel, clearButton, confirmButton), BorderLayout.SOUTH);
 
         contentPanel.add(productPanel);
         contentPanel.add(orderPanel);
@@ -295,6 +303,20 @@ public class MainFrame extends JFrame {
         actionPanel.add(quantitySpinner);
         actionPanel.add(addButton);
         return actionPanel;
+    }
+
+    private JPanel createOrderBottomPanel(JLabel totalLabel, JButton clearButton, JButton confirmButton) {
+        JPanel bottomPanel = new JPanel(new BorderLayout(8, 0));
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+
+        totalLabel.setFont(totalLabel.getFont().deriveFont(Font.BOLD));
+        buttonPanel.add(clearButton);
+        buttonPanel.add(confirmButton);
+
+        bottomPanel.add(totalLabel, BorderLayout.WEST);
+        bottomPanel.add(buttonPanel, BorderLayout.EAST);
+
+        return bottomPanel;
     }
 
     private void createControllers() {
@@ -367,6 +389,26 @@ public class MainFrame extends JFrame {
         }
     }
 
+    private void clearReservationCart() {
+        if (!databaseIsReady()) {
+            return;
+        }
+
+        reservationOrderController.clearCurrentOrder();
+        renderReservationCart();
+        showStatus("Reservationskurven er ryddet.");
+    }
+
+    private void clearSaleCart() {
+        if (!databaseIsReady()) {
+            return;
+        }
+
+        saleOrderController.clearCurrentOrder();
+        renderSaleCart();
+        showStatus("Salgskurven er ryddet.");
+    }
+
     private void confirmReservationFromForm() {
         if (!databaseIsReady()) {
             return;
@@ -382,8 +424,8 @@ public class MainFrame extends JFrame {
             showStatus("Reservationen kunne ikke gennemføres.");
             showError("Reservationen kunne ikke gennemføres.");
         } catch (RuntimeException e) {
-            showStatus("Reservationen mangler oplysninger eller kunden findes ikke.");
-            showError("Reservationen mangler oplysninger, eller telefonnummeret findes ikke i kundetabellen.");
+            showStatus("Reservationen mangler oplysninger eller kunden matcher ikke.");
+            showError("Reservationen mangler oplysninger, eller navn og telefonnummer matcher ikke.");
         }
     }
 
@@ -403,6 +445,7 @@ public class MainFrame extends JFrame {
 
     private void renderReservationCart() {
         clearTable(reservationCartModel);
+        reservationTotalLabel.setText(formatTotal(BigDecimal.ZERO));
 
         ReservedOrder currentOrder = reservationOrderController.getCurrentOrder();
 
@@ -420,10 +463,13 @@ public class MainFrame extends JFrame {
                     formatMoney(line.getSubtotal())
             });
         }
+
+        reservationTotalLabel.setText(formatTotal(currentOrder.calculateTotal()));
     }
 
     private void renderSaleCart() {
         clearTable(saleCartModel);
+        saleTotalLabel.setText(formatTotal(BigDecimal.ZERO));
 
         SaleOrder currentOrder = saleOrderController.getCurrentOrder();
 
@@ -441,6 +487,8 @@ public class MainFrame extends JFrame {
                     formatMoney(line.getSubtotal())
             });
         }
+
+        saleTotalLabel.setText(formatTotal(currentOrder.calculateTotal()));
     }
 
     private void showReservationReceipt(ReservedOrder order) {
@@ -646,6 +694,10 @@ public class MainFrame extends JFrame {
 
     private String formatMoney(BigDecimal amount) {
         return amount + " kr.";
+    }
+
+    private String formatTotal(BigDecimal amount) {
+        return "Total: " + formatMoney(amount);
     }
 
     private void showStatus(String message) {
