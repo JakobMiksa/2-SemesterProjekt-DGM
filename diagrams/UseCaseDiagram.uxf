@@ -4,8 +4,8 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>550</x>
-      <y>473</y>
+      <x>682</x>
+      <y>506</y>
       <w>66</w>
       <h>121</h>
     </coordinates>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>770</x>
-      <y>66</y>
+      <x>902</x>
+      <y>99</y>
       <w>286</w>
-      <h>627</h>
+      <h>682</h>
     </coordinates>
     <panel_attributes>                          System
 halign=left</panel_attributes>
@@ -27,8 +27,8 @@ halign=left</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>550</x>
-      <y>143</y>
+      <x>682</x>
+      <y>176</y>
       <w>88</w>
       <h>121</h>
     </coordinates>
@@ -38,8 +38,8 @@ halign=left</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>605</x>
-      <y>121</y>
+      <x>737</x>
+      <y>154</y>
       <w>264</w>
       <h>77</h>
     </coordinates>
@@ -49,8 +49,8 @@ halign=left</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>847</x>
-      <y>110</y>
+      <x>979</x>
+      <y>143</y>
       <w>132</w>
       <h>44</h>
     </coordinates>
@@ -60,8 +60,8 @@ halign=left</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>825</x>
-      <y>176</y>
+      <x>957</x>
+      <y>209</y>
       <w>176</w>
       <h>44</h>
     </coordinates>
@@ -71,8 +71,8 @@ halign=left</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>605</x>
-      <y>165</y>
+      <x>737</x>
+      <y>198</y>
       <w>242</w>
       <h>55</h>
     </coordinates>
@@ -82,8 +82,8 @@ halign=left</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>605</x>
-      <y>264</y>
+      <x>737</x>
+      <y>297</y>
       <w>242</w>
       <h>275</h>
     </coordinates>
@@ -93,8 +93,8 @@ halign=left</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>825</x>
-      <y>253</y>
+      <x>957</x>
+      <y>286</y>
       <w>176</w>
       <h>44</h>
     </coordinates>
@@ -104,19 +104,19 @@ halign=left</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>616</x>
-      <y>330</y>
-      <w>231</w>
-      <h>220</h>
+      <x>737</x>
+      <y>363</y>
+      <w>242</w>
+      <h>209</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;180.0;190.0;10.0</additional_attributes>
+    <additional_attributes>10.0;170.0;200.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>825</x>
-      <y>319</y>
+      <x>957</x>
+      <y>352</y>
       <w>176</w>
       <h>44</h>
     </coordinates>
@@ -126,8 +126,8 @@ halign=left</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>825</x>
-      <y>385</y>
+      <x>957</x>
+      <y>418</y>
       <w>176</w>
       <h>44</h>
     </coordinates>
@@ -137,8 +137,8 @@ halign=left</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>825</x>
-      <y>451</y>
+      <x>957</x>
+      <y>484</y>
       <w>176</w>
       <h>44</h>
     </coordinates>
@@ -148,12 +148,78 @@ halign=left</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>792</x>
-      <y>517</y>
+      <x>924</x>
+      <y>550</y>
       <w>253</w>
       <h>66</h>
     </coordinates>
     <panel_attributes>Release Expired Reservation Stock</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>737</x>
+      <y>539</y>
+      <w>242</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;200.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>957</x>
+      <y>627</y>
+      <w>176</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>Update stock quantity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>737</x>
+      <y>495</y>
+      <w>242</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;50.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>737</x>
+      <y>198</y>
+      <w>209</w>
+      <h>407</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;170.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>957</x>
+      <y>693</y>
+      <w>176</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>View active reservations</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>737</x>
+      <y>539</y>
+      <w>242</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;200.0;160.0</additional_attributes>
   </element>
 </diagram>
