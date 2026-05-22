@@ -22,6 +22,14 @@ public class SaleOrderController {
         this.saleOrderDAO = new SaleOrderDB();
     }
 
+    SaleOrderController(ProductDAO productDAO, PriceDAO priceDAO, StockItemDAO stockItemDAO,
+            SaleOrderDAO saleOrderDAO) {
+        this.productDAO = productDAO;
+        this.priceDAO = priceDAO;
+        this.stockItemDAO = stockItemDAO;
+        this.saleOrderDAO = saleOrderDAO;
+    }
+
     public List<StockItem> showAvailableProducts() throws DataAccessException {
         return stockItemDAO.findAllAvailableStock();
     }
@@ -94,10 +102,11 @@ public class SaleOrderController {
             throw new IllegalStateException("Payment has not been confirmed.");
         }
 
-        DBConnection connection = DBConnection.getInstance();
+        boolean transactionStarted = false;
 
         try {
-            connection.startTransaction();
+            startTransaction();
+            transactionStarted = true;
 
             currentOrder.setDate(LocalDate.now());
             currentOrder.calculateTotal();
@@ -109,16 +118,32 @@ public class SaleOrderController {
             }
 
             saleOrderDAO.save(currentOrder);
-            connection.commitTransaction();
+            commitTransaction();
 
             currentOrder = null;
         } catch (DataAccessException e) {
-            connection.rollbackTransaction();
+            if (transactionStarted) {
+                rollbackTransaction();
+            }
             throw e;
         } catch (RuntimeException e) {
-            connection.rollbackTransaction();
+            if (transactionStarted) {
+                rollbackTransaction();
+            }
             throw e;
         }
+    }
+
+    protected void startTransaction() {
+        DBConnection.getInstance().startTransaction();
+    }
+
+    protected void commitTransaction() {
+        DBConnection.getInstance().commitTransaction();
+    }
+
+    protected void rollbackTransaction() {
+        DBConnection.getInstance().rollbackTransaction();
     }
 
     public SaleOrder getCurrentOrder() {
